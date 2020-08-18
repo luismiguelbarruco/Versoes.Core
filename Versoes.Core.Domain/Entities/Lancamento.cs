@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using Versoes.Core.Domain.Entities;
 
-namespace Versoes.Entities.Models
-{
-    public abstract class Lancamento
-    {
+namespace Versoes.Entities.Models {
+    public abstract class Lancamento {
         public long Id { get; set; }
         public string Descricao { get; set; }
         public ICollection<Projeto> Projetos { get; set; } //TODO: Versão do projeto na tabela de relacionamento n .. n
@@ -15,5 +13,6 @@ namespace Versoes.Entities.Models
         public Usuario CriadoPor { get; set; }
         public Usuario PendentePara { get; set; }
         public ICollection<Anotacao> Anotacoes { get; set; }
+        public string Teste { get; set; }
     }
 }
