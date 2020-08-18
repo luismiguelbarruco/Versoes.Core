@@ -1,4 +1,4 @@
-﻿namespace Versoes.Entities.DataTransferObjects
+﻿namespace Versoes.Core.Domain.DataTransferObjects
 {
     public class ClienteDto
     {

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versões.Core</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Modal login -->
+    <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Login</label>
+                            <input type="text" placeholder="Login" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                        <button type="submit" class="btn btn-danger">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-projeto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Projeto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" placeholder="Name" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="sigla">Status</label>
+                            <select class="form-control bg-light" id="cidades">
+                                <option>Normal</option>
+                                <option>Bloqueado</option>
+                                <option>Excluido</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        <button type="submit" class="btn btn-danger">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3 box-shadow">
+        <a href="index.html" class="navbar-brand">
+            <img src="/assets/bug.svg" alt="" width="20" height="20" title="Bug">
+            <span>Versões.Core</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">                
+                <li class="nav-item">
+                    <a href="lancamentos.html" class="nav-link">Lançamentos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="consulta.html" class="nav-link">Consultas</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastros</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropDown">
+                        <a href="usuario.html" class="dropdown-item">Usuário</a>
+                        <a href="projeto.html" class="dropdown-item active">Projeto</a>
+                        <a href="setor.html" class="dropdown-item">Setor</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <span>[nome do usuário]</span>
+                    <a href="#" class="btn btn-outline-primary ml-md-2" data-toggle="modal" data-target="#modal-login">Sign-in</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="btn btn-outline-dark ml-md-2">Sign-out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container">
+        <div class="text-center mt-5 pt-5">
+            <h1 class="display-4 text-primary">Projetos</h1>
+        </div>
+
+        <a href="#" class="btn btn-outline-primary btn mb-3" data-toggle="modal" data-target="#modal-projeto">Novo</a>
+        <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#modal-projeto">Novo</button>
+        <table class="table table-hover table-responsive-md">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Pcdrug</td>
+                    <td>Normal</td>
+                    <td>
+                        <a href="#" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#modal-projeto">Alterar</a>
+                        <a href="#" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modal-projeto">Excluir</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Relatórios</td>
+                    <td>Normal</td>
+                    <td>
+                        <a href="#" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#modal-projeto">Alterar</a>
+                        <a href="#" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modal-projeto">Excluir</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>MultPcd</td>
+                    <td>Normal</td>
+                    <td>
+                        <a href="#" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#modal-projeto">Alterar</a>
+                        <a href="#" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modal-projeto">Excluir</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

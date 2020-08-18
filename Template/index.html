@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versões.Core</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Modal login -->
+    <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Login</label>
+                            <input type="text" placeholder="Login" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                        <button type="submit" class="btn btn-danger">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3 box-shadow">
+        <a href="index.html" class="navbar-brand">
+            <img src="/assets/bug.svg" alt="" width="20" height="20" title="Bug">
+            <span>Versões.Core</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">                
+                <li class="nav-item">
+                    <a href="lancamentos.html" class="nav-link">Lançamentos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="consulta.html" class="nav-link">Consultas</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastros</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropDown">
+                        <a href="usuario.html" class="dropdown-item">Usuário</a>
+                        <a href="projeto.html" class="dropdown-item">Projeto</a>
+                        <a href="setor.html" class="dropdown-item">Setor</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <span>[nome do usuário]</span>
+                    <a href="#" class="btn btn-outline-primary ml-md-2" data-toggle="modal" data-target="#modal-login">Sign-in</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="btn btn-outline-dark ml-md-2">Sign-out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container mt-5 pt-5">
+        <div class="card setor-content">
+            <div class="card-header setor-header table-header">Últimas Atualizações </div>
+            <table class="table table-hover table-responsive-md">
+                <thead>
+                    <tr>
+                        <th scope="col">Protocolo</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Projeto</th>
+                        <th scope="col">Versão</th>
+                        <th scope="col">Pendente</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">232526</th>
+                        <td>04/02/2020</td>
+                        <td>
+                            <a href="#"><span>Correção de bug na entrada namual</span></a>
+                        </td>
+                        <td>PcdrugCompras</td>
+                        <td>3.19</td>
+                        <td>ED</td>
+                        <td>Fechado</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">232527</th>
+                        <td>04/02/2020</td>
+                        <td>
+                            <a href="#"><span>Desenvolvido cadastro de projetos</span></a>
+                        </td>
+                        <td>Versões 2.0</td>
+                        <td>1.0</td>
+                        <td>FV</td>
+                        <td>Novo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">232528</th>
+                        <td>04/02/2020</td>
+                        <td>
+                            <a href="#"><span>Desenvolvido cadastro de setores</span></a>
+                        </td>
+                        <td>Versões 2.0</td>
+                        <td>1.0</td>
+                        <td>GV</td>
+                        <td>Novo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">232528</th>
+                        <td>04/02/2020</td>
+                        <td>
+                            <a href="#"><span>Desenvolvido cadastro de setores</span></a>
+                        </td>
+                        <td>Versões 2.0</td>
+                        <td>1.0</td>
+                        <td>GV</td>
+                        <td>Novo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="container mt-4 pt-4">
+        <div class="card pendencias-content">
+            <div class="card-header table-header pendencias-header">Minhas Pêndencias</div>
+            <table class="table table-hover table-responsive-md">
+                <thead>
+                    <tr>
+                        <th scope="col">Protocolo</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Projeto</th>
+                        <th scope="col">Versão</th>
+                        <th scope="col">Pendente</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">232527</th>
+                        <td>04/02/2020</td>
+                        <td>
+                            <a href="#"><span>Desenvolvido cadastro de projetos</span></a>
+                        </td>
+                        <td>Versões 2.0</td>
+                        <td>1.0</td>
+                        <td>FV</td>
+                        <td>Novo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">232528</th>
+                        <td>04/02/2020</td>
+                        <td>
+                            <a href="#"><span>Desenvolvido cadastro de setores</span></a>
+                        </td>
+                        <td>Versões 2.0</td>
+                        <td>1.0</td>
+                        <td>GV</td>
+                        <td>Novo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">232428</th>
+                        <td>05/01/2020</td>
+                        <td>
+                            <a href="#"><span>Corrigido bug na baka xpto.exe</span></a>
+                        </td>
+                        <td>Baka</td>
+                        <td>1.4</td>
+                        <td>LM</td>
+                        <td>Novo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

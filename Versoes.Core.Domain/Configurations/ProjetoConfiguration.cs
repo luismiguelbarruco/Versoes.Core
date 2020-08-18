@@ -8,8 +8,14 @@ namespace Versoes.Entities.Configurations
     {
         public void Configure(EntityTypeBuilder<Projeto> builder)
         {
-            builder.HasIndex(p => p.Nome)
-                .IsUnique();
+            builder.ToTable("Projeto");
+
+            builder.HasIndex(projeto => projeto.Id);
+            builder.HasIndex(projeto => projeto.Nome).IsUnique();
+
+            builder.Property(projeto => projeto.Id).ValueGeneratedOnAdd();
+            builder.Property(projeto => projeto.Nome).HasMaxLength(100).IsRequired();
+            builder.Property(projeto => projeto.Status).IsRequired();
         }
     }
 }

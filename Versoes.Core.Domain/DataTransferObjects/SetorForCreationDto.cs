@@ -1,6 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Versoes.Entities;
+using System.ComponentModel.DataAnnotations;
 
-namespace Versoes.Entities.DataTransferObjects
+namespace Versoes.Core.Domain.DataTransferObjects
 {
     public class SetorForCreationDto
     {

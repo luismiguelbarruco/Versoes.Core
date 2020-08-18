@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Versoes.Entities.Models;
 
-namespace Versoes.Entities.DataTransferObjects
+namespace Versoes.Core.Domain.DataTransferObjects
 {
     public class RequisitoForUpdateDto
     {

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Versoes.Core.Domain.DataTransferObjects;
 
 namespace Versoes.Entities.DataTransferObjects
 {

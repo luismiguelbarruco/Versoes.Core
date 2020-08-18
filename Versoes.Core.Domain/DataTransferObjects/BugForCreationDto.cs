@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Versoes.Core.Domain.DataTransferObjects;
 using Versoes.Entities.Models;
 
 namespace Versoes.Entities.DataTransferObjects

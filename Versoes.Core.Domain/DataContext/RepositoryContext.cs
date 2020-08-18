@@ -18,8 +18,8 @@ namespace Versoes.Entities
         public DbSet<Setor> Setores { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Projeto> Projetos { get; set; }
-        public DbSet<Requisito> Requisitos { get; set; }
-        public DbSet<Bug> Bugs { get; set; }
+        // public DbSet<Requisito> Requisitos { get; set; }
+        // public DbSet<Bug> Bugs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

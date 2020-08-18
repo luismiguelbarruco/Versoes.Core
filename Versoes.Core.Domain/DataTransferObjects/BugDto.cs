@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Versoes.Entities.Models;
 
-namespace Versoes.Entities.DataTransferObjects
+namespace Versoes.Core.Domain.DataTransferObjects
 {
     public class BugDto
     {
@@ -15,7 +15,6 @@ namespace Versoes.Entities.DataTransferObjects
         public UsuarioDto CriadoPor { get; set; }
         public UsuarioDto PendentePara { get; set; }
         public ICollection<AnotacaoDto> Anotacoes { get; set; }
-
         public Criticidade Criticidade { get; set; }
         public StatusDoBug Status { get; set; }
     }

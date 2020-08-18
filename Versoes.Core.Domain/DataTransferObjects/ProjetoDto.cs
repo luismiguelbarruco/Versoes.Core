@@ -1,4 +1,7 @@
-﻿namespace Versoes.Entities.DataTransferObjects
+﻿using Versoes.Entities;
+using Versoes.Entities.Models;
+
+namespace Versoes.Core.Domain.DataTransferObjects
 {
     public class ProjetoDto
     {

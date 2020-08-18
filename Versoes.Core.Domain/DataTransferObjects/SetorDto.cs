@@ -1,4 +1,6 @@
-﻿namespace Versoes.Entities.DataTransferObjects
+﻿using Versoes.Entities;
+
+namespace Versoes.Core.Domain.DataTransferObjects
 {
     public class SetorDto
     {

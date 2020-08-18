@@ -1,0 +1,33 @@
+.box-shadow {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05), 0 4px 8px 0 rgba(0, 0, 0, .05);
+}
+
+.table-header {
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.lancamento-content,
+.setor-content {
+    border: 1px solid #007bff;
+}
+
+.lancamento-header,
+.setor-header {
+    background: #007bff;   
+}
+
+.pendencias-content {
+    border: 1px solid #fc4a1a;
+}
+
+.pendencias-header {
+    background: #fc4a1a;
+}
+
+.edit {
+    color: #007bff;
+}
+
+/* #f7b733 */
