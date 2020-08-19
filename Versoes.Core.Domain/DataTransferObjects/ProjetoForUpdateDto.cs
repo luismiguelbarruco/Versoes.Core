@@ -1,13 +1,19 @@
-﻿using Versoes.Entities;
-using System.ComponentModel.DataAnnotations;
+﻿using Flunt.Validations;
+using Versoes.Entities;
 
 namespace Versoes.Core.Domain.DataTransferObjects
 {
-    public class ProjetoForUpdateDto
+    public class ProjetoForUpdateDto : DtoBase
     {
-        [Required(ErrorMessage = "Nome é obrigatório")]
-        [StringLength(100, ErrorMessage = "Nome não pode ser maior que 100 caracteres.")]
         public string Nome { get; set; }
-        public StatusDeCadastro Status { get; set; }
+        public StatusDeCadastro Status { get; set; } = StatusDeCadastro.Normal;
+
+        public override void Validate()
+        {
+            AddNotifications(new Contract()
+                .IsNotNullOrEmpty(Nome, nameof(Nome), "Nome é obrigatório")
+                .HasMaxLen(Nome, 100, nameof(Nome), "Nome não pode ser maior que 100 caracteres.")
+            );
+        }
     }
 }

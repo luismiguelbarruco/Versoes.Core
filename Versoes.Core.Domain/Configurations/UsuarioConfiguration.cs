@@ -15,8 +15,8 @@ namespace Versoes.Entities.Configurations
 
             builder.Property(usuario => usuario.Id).ValueGeneratedOnAdd();
             builder.Property(usuario => usuario.Nome).HasMaxLength(100).IsRequired();
-            builder.Property(usuario => usuario.Login).HasMaxLength(100).IsRequired();
-            builder.Property(usuario => usuario.Senha).HasMaxLength(100).IsRequired();
+            builder.Property(usuario => usuario.Login).HasMaxLength(20).IsRequired();
+            builder.Property(usuario => usuario.Senha).HasMaxLength(20).IsRequired();
             builder.Property(usuario => usuario.Status).IsRequired();
 
             builder.HasOne<Setor>(usuario => usuario.Setor)

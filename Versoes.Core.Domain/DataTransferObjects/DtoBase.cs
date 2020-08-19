@@ -1,7 +1,9 @@
+using Flunt.Notifications;
+
 namespace Versoes.Core.Domain.DataTransferObjects
 {
-    public class DtoBase
+    public abstract class DtoBase : Notifiable, IDto
     {
-        
+        public abstract void Validate();
     }
 }
