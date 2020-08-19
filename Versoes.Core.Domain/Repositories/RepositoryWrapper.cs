@@ -1,8 +1,7 @@
 ﻿using System.Threading.Tasks;
-using Versoes.Contracts;
 using Versoes.Entities;
 
-namespace Versoes.Repositories
+namespace Versoes.Core.Domain.Repositories
 {
     public class RepositoryWrapper : IRepositoryWrapper
     {

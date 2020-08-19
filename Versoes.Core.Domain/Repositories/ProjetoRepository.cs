@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Versoes.Contracts;
 using Versoes.Entities;
 using Versoes.Entities.Models;
 
-namespace Versoes.Repositories
+namespace Versoes.Core.Domain.Repositories
 {
     public class ProjetoRepository : RepositoryBase<Projeto>, IProjetoRepository
     {

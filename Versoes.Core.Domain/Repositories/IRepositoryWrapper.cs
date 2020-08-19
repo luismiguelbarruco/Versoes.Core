@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Versoes.Contracts
+namespace Versoes.Core.Domain.Repositories
 {
     public interface IRepositoryWrapper
     {

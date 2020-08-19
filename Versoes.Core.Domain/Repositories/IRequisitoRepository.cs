@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Versoes.Entities.Models;
 
-namespace Versoes.Contracts
+namespace Versoes.Core.Domain.Repositories
 {
     public interface IRequisitoRepository : IRepositoryBase<Requisito>
     {

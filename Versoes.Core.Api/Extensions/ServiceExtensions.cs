@@ -3,9 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
-using Versoes.Contracts;
+using Versoes.Core.Domain.Repositories;
 using Versoes.Entities;
-using Versoes.Repositories;
 
 namespace Versoes.Api.Extensions
 {

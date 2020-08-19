@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
-using Versoes.Contracts;
+using Versoes.Core.Domain.Repositories;
 
 namespace Versoes.Api.Controllers
 {

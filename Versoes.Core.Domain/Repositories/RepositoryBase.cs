@@ -2,10 +2,9 @@
 using System;
 using System.Linq;
 using System.Linq.Expressions;
-using Versoes.Contracts;
 using Versoes.Entities;
 
-namespace Versoes.Repositories
+namespace Versoes.Core.Domain.Repositories
 {
     public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {

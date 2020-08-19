@@ -1,7 +1,7 @@
-﻿using Flunt.Validations;
-using Versoes.Core.Domain.DataTransferObjects;
+﻿using Versoes.Entities;
+using Flunt.Validations;
 
-namespace Versoes.Entities.DataTransferObjects
+namespace Versoes.Core.Domain.DataTransferObjects
 {
     public class UsuarioForCreationDto : DtoBase
     {

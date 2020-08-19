@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Versoes.Contracts
+namespace Versoes.Core.Domain.Repositories
 {
     public interface IRepositoryBase<T>
     {
