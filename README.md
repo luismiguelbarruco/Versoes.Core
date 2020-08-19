@@ -1,0 +1,2 @@
+# Versoes.Core
+Versoes.Core
