@@ -1,28 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 using Versoes.Core.Site.Models;
 
 namespace Versoes.Core.Site.Controllers
 {
-    public class HomeController : Controller
+    public class UsuarioController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ILogger<UsuarioController> _logger;
+
+        public UsuarioController(ILogger<UsuarioController> logger)
         {
             _logger = logger;
         }
+
 
         public IActionResult Index()
         {
             return View();
         }
-     
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
