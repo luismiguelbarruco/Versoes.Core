@@ -51,7 +51,7 @@ namespace Versoes.Core.Domain.Services
             return result;
         }
 
-        public async Task<IResult> AtualizarAsync(ProjetoForUpdateVireModel projetoForUpdateVireModel)
+        public async Task<IResult> AtualizarAsync(ProjetoForUpdateViewModel projetoForUpdateVireModel)
         {
             var alterarProjetoCommand = _mapper.Map<AlterarProjetoCommand>(projetoForUpdateVireModel);
 

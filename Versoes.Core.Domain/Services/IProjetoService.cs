@@ -11,6 +11,6 @@ namespace Versoes.Core.Domain.Services
         Task<IEnumerable<ProjetoViewModel>> GetAllProjetosAsync();
         Task<ProjetoViewModel> GetAllProjetoByIdAsync(long id);
         Task<IResult> InserirAsync(ProjetoForCreationViewModel projetoForCreationViewModel);
-        Task<IResult> AtualizarAsync(ProjetoForUpdateVireModel projetoForUpdateVireModel);
+        Task<IResult> AtualizarAsync(ProjetoForUpdateViewModel projetoForUpdateVireModel);
     }
 }

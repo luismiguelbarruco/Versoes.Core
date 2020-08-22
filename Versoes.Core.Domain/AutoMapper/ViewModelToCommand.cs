@@ -12,7 +12,7 @@ namespace Versoes.Core.Domain.AutoMapper
                 .ConstructUsing(p => new CadastrarProjetoCommand(p.Nome, p.Status))
                 .ForMember(p => p.ValidationResult, opt => opt.Ignore());
 
-            CreateMap<ProjetoForUpdateVireModel, AlterarProjetoCommand>()
+            CreateMap<ProjetoForUpdateViewModel, AlterarProjetoCommand>()
                 .ConstructUsing(p => new AlterarProjetoCommand(p.Id, p.Nome, p.Status))
                 .ForMember(p => p.ValidationResult, opt => opt.Ignore());
 
