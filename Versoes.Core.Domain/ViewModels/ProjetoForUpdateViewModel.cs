@@ -4,7 +4,7 @@ using Versoes.Core.Domain.ViewModels.Validations;
 
 namespace Versoes.Core.Domain.ViewModels
 {
-    public class ProjetoForUpdateVireModel : ProjetoViewModel, IViewModel
+    public class ProjetoForUpdateViewModel : ProjetoViewModel, IViewModel
     {
         public IReadOnlyCollection<Notification> Notifications { get; set; }
 

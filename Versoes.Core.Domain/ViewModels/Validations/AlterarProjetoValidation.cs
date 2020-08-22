@@ -1,9 +1,9 @@
 ﻿namespace Versoes.Core.Domain.ViewModels.Validations
 {
-    public class AlterarProjetoValidation : ProjetoValidation<ProjetoForUpdateVireModel>
+    public class AlterarProjetoValidation : ProjetoValidation<ProjetoForUpdateViewModel>
     {
 
-        public AlterarProjetoValidation(ProjetoForUpdateVireModel viewModel)
+        public AlterarProjetoValidation(ProjetoForUpdateViewModel viewModel)
             : base(viewModel)
         {
             ValidateId();

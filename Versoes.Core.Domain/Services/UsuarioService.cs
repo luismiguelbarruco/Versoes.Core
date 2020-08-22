@@ -33,7 +33,7 @@ namespace Versoes.Core.Domain.Services
             return result;
         }
 
-        public async Task<IResult> AtualizarAsync(UsuarioForUpdateVireModel usuarioForUpdateVireModel)
+        public async Task<IResult> AtualizarAsync(UsuarioForUpdateViewModel usuarioForUpdateVireModel)
         {
             var alterarUsuarioCommand = _mapper.Map<AlterarUsuarioCommand>(usuarioForUpdateVireModel);
 
