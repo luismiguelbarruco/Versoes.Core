@@ -10,7 +10,7 @@ namespace Versoes.Entities.Configurations
         {
             builder.ToTable("Projeto");
 
-            builder.HasIndex(projeto => projeto.Id);
+            builder.HasKey(projeto => projeto.Id);
             builder.HasIndex(projeto => projeto.Nome).IsUnique();
 
             builder.Property(projeto => projeto.Id).ValueGeneratedOnAdd();

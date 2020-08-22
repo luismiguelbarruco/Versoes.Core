@@ -1,38 +1,70 @@
+using AutoMapper;
 using Flunt.Notifications;
-using Versoes.Core.Domain.DataTransferObjects;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Versoes.Core.Domain.Commands;
+using Versoes.Core.Domain.Handlers;
+using Versoes.Core.Domain.Repositories;
+using Versoes.Core.Domain.ResultComunication;
+using Versoes.Core.Domain.ViewModels;
 
 namespace Versoes.Core.Domain.Services
 {
-    public class ProjetoService : Notifiable
+    public class ProjetoService : Notifiable, IProjetoService
     {
-        public IServiceResult Inserir(ProjetoForCreationDto dto)
+        private readonly IMapper _mapper;
+        private readonly IRepositoryWrapper _repository;
+
+        public ProjetoService(IMapper mapper, IRepositoryWrapper repository)
         {
-            dto.Validate();
-
-            if(dto.Invalid)
-            {
-                AddNotifications(dto);
-                return new ServiceResult(false, "Não foi possivel cadastrar o projeto");
-            }
-
-            //implementar as demais validações
-
-            return new ServiceResult();
+            _mapper = mapper;
+            _repository = repository;
         }
 
-        public IServiceResult Atualizar(UsuarioForUpdateDto dto)
+        public async Task<IEnumerable<ProjetoViewModel>> GetAllProjetosAsync()
         {
-            dto.Validate();
+            var projetos = await _repository.Projeto.GetAllProjetosAsync();
 
-            if(dto.Invalid)
-            {
-                AddNotifications(dto);
-                return new ServiceResult(false, "Não foi possivel atualizar o projeto");
-            }
+            var projetosResult = _mapper.Map<IEnumerable<ProjetoViewModel>>(projetos);
 
-            //implementar as demais validações
+            return projetosResult;
+        }
 
-            return new ServiceResult();
+        public async Task<ProjetoViewModel> GetAllProjetoByIdAsync(long id)
+        {
+            var projeto = await _repository.Projeto.GetProjetoByIdAsync(id);
+
+            var projetoResult = _mapper.Map<ProjetoViewModel>(projeto);
+
+            return projetoResult;
+        }
+
+        public async Task<IResult> InserirAsync(ProjetoForCreationViewModel projetoForCreationViewModel)
+        {
+            var cadastrarProjetoCommand = _mapper.Map<CadastrarProjetoCommand>(projetoForCreationViewModel);
+
+            var projetoHandler = new ProjetoHandler(_mapper, _repository);
+
+            var result = await projetoHandler.Handler(cadastrarProjetoCommand);
+
+            return result;
+        }
+
+        public async Task<IResult> AtualizarAsync(ProjetoForUpdateVireModel projetoForUpdateVireModel)
+        {
+            var alterarProjetoCommand = _mapper.Map<AlterarProjetoCommand>(projetoForUpdateVireModel);
+
+            var projetoHandler = new ProjetoHandler(_mapper, _repository);
+
+            var result = await projetoHandler.Handler(alterarProjetoCommand);
+
+            return result;
+        }
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
         }
     }
 }

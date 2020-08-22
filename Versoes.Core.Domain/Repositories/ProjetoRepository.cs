@@ -22,5 +22,13 @@ namespace Versoes.Core.Domain.Repositories
         public async Task<Projeto> GetProjetoByIdAsync(long id) =>
             await FindByCondition(p => p.Id.Equals(id))
                 .FirstOrDefaultAsync();
+
+        public async Task<Projeto> GetProjetoByNameAsync(string name) =>
+            await FindByCondition(p => p.Nome.Equals(name))
+                .FirstOrDefaultAsync();
+
+        public async Task<Projeto> GetProjetoByNameAndDiferentIdAsync(string name, long id) =>
+            await FindByCondition(p => p.Nome.Equals(name) && !p.Id.Equals(id))
+                .FirstOrDefaultAsync();
     }
 }

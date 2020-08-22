@@ -1,38 +1,70 @@
+using AutoMapper;
 using Flunt.Notifications;
-using Versoes.Core.Domain.DataTransferObjects;
+using Versoes.Core.Domain.Commands;
+using Versoes.Core.Domain.ViewModels;
+using Versoes.Core.Domain.Handlers;
+using Versoes.Core.Domain.Repositories;
+using System.Threading.Tasks;
+using Versoes.Core.Domain.ResultComunication;
+using System;
+using System.Collections.Generic;
 
 namespace Versoes.Core.Domain.Services
 {
-    public class SetorSerive : Notifiable
+    public class SetorSerive : Notifiable, ISetorSerive
     {
-        public IServiceResult Inserir(SetorForCreationDto dto)
+        private readonly IMapper _mapper;
+        private readonly IRepositoryWrapper _repository;
+
+        public SetorSerive(IMapper mapper, IRepositoryWrapper repository)
         {
-            dto.Validate();
-
-            if(dto.Invalid)
-            {
-                AddNotifications(dto);
-                return new ServiceResult(false, "Não foi possivel cadastrar o setor");
-            }
-
-            //implementar as demais validações
-
-            return new ServiceResult();
+            _mapper = mapper;
+            _repository = repository;
         }
 
-        public IServiceResult Atualizar(SetorForUpdateDto dto)
+        public async Task<IEnumerable<SetorViewModel>> GetAllSetoresAsync()
         {
-            dto.Validate();
+            var setores = await _repository.Setor.GetAllSetoresAsync();
 
-            if(dto.Invalid)
-            {
-                AddNotifications(dto);
-                return new ServiceResult(false, "Não foi possivel atualizar o setor");
-            }
+            var setoresResult = _mapper .Map<IEnumerable<SetorViewModel>>(setores);
 
-            //implementar as demais validações
+            return setoresResult;
+        }
 
-            return new ServiceResult();
-        }        
+        public async Task<SetorViewModel> GetSetorByIdAsync(long id)
+        {
+            var setor = await _repository.Setor.GetSetorByIdAsync(id);
+
+            var setorResult = _mapper.Map<SetorViewModel>(setor);
+
+            return setorResult;
+        }
+
+        public async Task<IResult> InserirAsync(SetorForCreationViewModel setorForCreationViewModel)
+        {
+            var cadastrarSetorCommand = _mapper.Map<CadastrarSetorCommand>(setorForCreationViewModel);
+
+            var setorHandle = new SetorHandler(_mapper, _repository);
+
+            var result = await setorHandle.Handler(cadastrarSetorCommand);
+
+            return result;
+        }
+
+        public async Task<IResult> AtualizarAsync(SetorForUpdateViewModel setorForUpdateViewModel)
+        {
+            var alterarSetorCommand = _mapper.Map<AlterarSetorCommand>(setorForUpdateViewModel);
+
+            var setorHandle = new SetorHandler(_mapper, _repository);
+
+            var result = await setorHandle.Handler(alterarSetorCommand);
+
+            return result;
+        }
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+        }
     }
 }

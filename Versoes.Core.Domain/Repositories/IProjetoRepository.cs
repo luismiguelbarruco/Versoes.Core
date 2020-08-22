@@ -8,5 +8,7 @@ namespace Versoes.Core.Domain.Repositories
     {
         Task<IEnumerable<Projeto>> GetAllProjetosAsync();
         Task<Projeto> GetProjetoByIdAsync(long id);
+        Task<Projeto> GetProjetoByNameAsync(string name);
+        Task<Projeto> GetProjetoByNameAndDiferentIdAsync(string name, long id);
     }
 }
