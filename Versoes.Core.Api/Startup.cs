@@ -22,16 +22,28 @@ namespace Versoes.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddControllers();
+            services.AddMvc(option => option.EnableEndpointRouting = false);
             services.ConfigureCors();
             services.ConfigureIISIntegration();
 
-            services.ConfigureSqlServerContext(Configuration);
+            services.AddMvc();
+
+            services.ConfigurePostgresContext(Configuration);
             services.ConfigureRepositoryWrapper();
+            services.ConfigureServices();
             services.ConfigureLogger();
             services.AddAutoMapper(typeof(Startup));
 
-            services.AddControllers();
+            // AutoMapper Settings
+            services.AddAutoMapperConfiguration();
+
+            services.AddCors(options => options.AddPolicy("AllowSpecificOrigin", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,19 +55,27 @@ namespace Versoes.Api
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            app.UseSerilogRequestLogging();
 
-            app.UseCors("CorsPolicy");
+            app.UseRouting();
+
+            app.UseCors(x => x
+               .AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader());
 
             app.UseForwardedHeaders(new ForwardedHeadersOptions
             {
                 ForwardedHeaders = ForwardedHeaders.All
             });
 
-            app.UseRouting();
+            app.UseMvc();
+            app.UseStaticFiles();
+            app.UseSerilogRequestLogging();
 
-            app.UseAuthorization();
+            
+            app.UseDefaultFiles();
+
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

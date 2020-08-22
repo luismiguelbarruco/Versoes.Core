@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-
+﻿
 namespace Versoes.Entities.Models
 {
     public class Setor
@@ -7,6 +6,6 @@ namespace Versoes.Entities.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public StatusDeCadastro Status { get; set; }
-        public Usuario Usuario { get; set; }
+        //public Usuario Usuario { get; set; }
     }
 }

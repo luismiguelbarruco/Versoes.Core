@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using Versoes.Core.Domain.AutoMapper;
 using Versoes.Core.Domain.Repositories;
+using Versoes.Core.Domain.Services;
 using Versoes.Entities;
 
 namespace Versoes.Api.Extensions
@@ -28,13 +31,28 @@ namespace Versoes.Api.Extensions
         public static void ConfigureLogger(this IServiceCollection services) =>
             services.AddSingleton(Log.Logger);
 
-        public static void ConfigureSqlServerContext(this IServiceCollection services, IConfiguration configuration)
+        public static void ConfigurePostgresContext(this IServiceCollection services, IConfiguration configuration)
         {
             var connectionString = configuration["postgresConnection:connectionString"];
-            services.AddDbContext<RepositoryContext>(o => o.UseNpgsql(connectionString));
+            services.AddEntityFrameworkNpgsql()
+                .AddDbContext<RepositoryContext>(o => o.UseNpgsql(connectionString));
         }
 
         public static void ConfigureRepositoryWrapper(this IServiceCollection services) =>
-            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
+            services.AddTransient<IRepositoryWrapper, RepositoryWrapper>();
+
+        public static void ConfigureServices(this IServiceCollection services)
+        {
+            services.AddScoped<ISetorSerive, SetorSerive>();
+            services.AddScoped<IProjetoService, ProjetoService>();
+            services.AddScoped<IUsuarioService, UsuarioService>();
+        }
+
+        public static void AddAutoMapperConfiguration(this IServiceCollection services)
+        {
+            services.AddAutoMapper(typeof(ViewModelToCommand));
+            services.AddAutoMapper(typeof(CommandToModel));
+            services.AddAutoMapper(typeof(ModelToViewModel));
+        }
     }
 }

@@ -19,9 +19,7 @@ namespace Versoes.Entities.Configurations
             builder.Property(usuario => usuario.Senha).HasMaxLength(20).IsRequired();
             builder.Property(usuario => usuario.Status).IsRequired();
 
-            builder.HasOne<Setor>(usuario => usuario.Setor)
-                .WithOne(us => us.Usuario)
-                .HasForeignKey<Usuario>(us => us.SetorId);
+            builder.HasOne<Setor>(usuario => usuario.Setor);
         }
     }
 }

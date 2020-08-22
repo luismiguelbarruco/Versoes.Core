@@ -6,7 +6,7 @@ namespace Versoes.Entities
 {
     public class RepositoryContext : DbContext
     {
-        public RepositoryContext(DbContextOptions options)
+        public RepositoryContext(DbContextOptions<RepositoryContext> options)
             : base(options)
         {
 #if DEBUG

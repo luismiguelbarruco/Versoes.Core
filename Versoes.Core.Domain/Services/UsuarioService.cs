@@ -1,38 +1,52 @@
+using AutoMapper;
 using Flunt.Notifications;
-using Versoes.Core.Domain.DataTransferObjects;
+using System;
+using System.Threading.Tasks;
+using Versoes.Core.Domain.Commands;
+using Versoes.Core.Domain.Commands.Validations;
+using Versoes.Core.Domain.Handlers;
+using Versoes.Core.Domain.Repositories;
+using Versoes.Core.Domain.ResultComunication;
+using Versoes.Core.Domain.ViewModels;
 
 namespace Versoes.Core.Domain.Services
 {
-    public class UsuarioService : Notifiable
+    public class UsuarioService : Notifiable, IUsuarioService
     {
-        public IServiceResult Inserir(UsuarioForCreationDto dto)
+        private readonly IMapper _mapper;
+        private readonly IRepositoryWrapper _repository;
+
+        public UsuarioService(IMapper mapper, IRepositoryWrapper repository)
         {
-            dto.Validate();
-
-            if(dto.Invalid)
-            {
-                AddNotifications(dto);
-                return new ServiceResult(false, "Não foi possivel cadastrar o usuário");
-            }
-
-            //implementar as demais validações
-
-            return new ServiceResult();
+            _mapper = mapper;
+            _repository = repository;
         }
 
-        public IServiceResult Atualizar(UsuarioForUpdateDto dto)
+        public async Task<IResult> InserirAsync(UsuarioForCreationViewModel usuarioForCreationViewModel)
         {
-            dto.Validate();
+            var cadastrarUsuarioCommand = _mapper.Map<CadastrarUsuarioCommand>(usuarioForCreationViewModel);
 
-            if(dto.Invalid)
-            {
-                AddNotifications(dto);
-                return new ServiceResult(false, "Não foi possivel atualizar o usuário");
-            }
+            var usuarioHandle = new UsuarioHandle(_mapper, _repository);
 
-            //implementar as demais validações
+            var result = await usuarioHandle.Handler(cadastrarUsuarioCommand);
 
-            return new ServiceResult();
+            return result;
+        }
+
+        public async Task<IResult> AtualizarAsync(UsuarioForUpdateVireModel usuarioForUpdateVireModel)
+        {
+            var alterarUsuarioCommand = _mapper.Map<AlterarUsuarioCommand>(usuarioForUpdateVireModel);
+
+            var usuarioHandle = new UsuarioHandle(_mapper, _repository);
+
+            var result = await usuarioHandle.Handler(alterarUsuarioCommand);
+
+            return result;
+        }
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
         }
     }
 }
