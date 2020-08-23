@@ -87,7 +87,7 @@ namespace Versoes.Api.Controllers
         }
 
         [HttpPut("projeto")]
-        public async Task<IResult> Put([FromBody] ProjetoForUpdateVireModel projetoForUpdateVireModel)
+        public async Task<IResult> Put([FromBody] ProjetoForUpdateViewModel projetoForUpdateVireModel)
         {
             try
             {
