@@ -1,28 +1,38 @@
 ﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 using System;
 using System.Threading.Tasks;
 using Versoes.Core.Api.Controllers;
-using Versoes.Core.Domain.Repositories;
 using Versoes.Core.Domain.ResultComunication;
 using Versoes.Core.Domain.Services;
 using Versoes.Core.Domain.ViewModels;
+using Versoes.Entities.Models;
 
 namespace Versoes.Api.Controllers
 {
     [EnableCors("AllowSpecificOrigin")]
-    [Route("api/[controller]")]
+    [Route("api")]
     [ApiController]
     public class UsuarioController : ApiController
     {
+        private readonly SignInManager<Usuario> _signInManager;
+        private readonly UserManager<Usuario> _userManager;
         private readonly ILogger _logger;
         private readonly IUsuarioService _usuarioService;
 
-        public UsuarioController(ILogger logger, IUsuarioService usuarioService)
+        public UsuarioController(
+            ILogger logger, 
+            IUsuarioService usuarioService, 
+            SignInManager<Usuario> signInManager,
+            UserManager<Usuario> userManager
+        )
         {
             _logger = logger;
             _usuarioService = usuarioService;
+            _signInManager = signInManager;
+            _userManager = userManager;
         }
 
         [HttpGet("usuario")]
@@ -37,7 +47,7 @@ namespace Versoes.Api.Controllers
 
         }
 
-        [HttpPost]
+        [HttpPost("usuario")]
         public async Task<IResult> Post([FromBody] UsuarioForCreationViewModel usuarioForCreationViewModel)
         {
             try
@@ -57,8 +67,8 @@ namespace Versoes.Api.Controllers
             }
         }
 
-        [HttpPut]
-        public async Task<IResult> Put([FromBody] UsuarioForUpdateVireModel usuarioForUpdateVireModel)
+        [HttpPut("usuario")]
+        public async Task<IResult> Put([FromBody] UsuarioForUpdateViewModel usuarioForUpdateVireModel)
         {
             try
             {
