@@ -5,15 +5,14 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Versoes.Core.Api.Controllers;
-using Versoes.Core.Domain.Repositories;
 using Versoes.Core.Domain.ResultComunication;
 using Versoes.Core.Domain.Services;
 using Versoes.Core.Domain.ViewModels;
 
 namespace Versoes.Api.Controllers
 {
-    [EnableCors("AllowSpecificOrigin")]
-    [Route("api")]
+
+    [Route("api/setores")]
     [ApiController]
     public class SetorController : ApiController
     {
@@ -26,7 +25,7 @@ namespace Versoes.Api.Controllers
             _setorSerive = setorSerive;
         }
 
-        [HttpGet("setor")]
+        [HttpGet]
         public async Task<IResult> Get()
         {
             try
@@ -46,7 +45,7 @@ namespace Versoes.Api.Controllers
             }
         }
 
-        [HttpGet("setor/{id}")]
+        [HttpGet("{id:int}")]
         public async Task<IResult> Get(int id)
         {
             try
@@ -66,7 +65,7 @@ namespace Versoes.Api.Controllers
             }
         }
 
-        [HttpPost("setor")]
+        [HttpPost]
         public async Task<IResult> Post([FromBody] SetorForCreationViewModel setorForCreationViewModel)
         {
             try
@@ -86,7 +85,7 @@ namespace Versoes.Api.Controllers
             }
         }
 
-        [HttpPut("setor")]
+        [HttpPut]
         public async Task<IResult> Put([FromBody] SetorForUpdateViewModel setorForUpdateViewModel)
         {
             try

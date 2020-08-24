@@ -1,12 +1,12 @@
-﻿<section class="container">
+﻿<section class="container" id="js-setor">
    
-    <button type="button" class="btn btn-success mb-0" data-toggle="modal" data-target="#modal-setor"><i class="fas fa-plus"></i> Novo Setor</button>
+    <button class="btn btn-success mb-0" id="btnNovoSetor" data-toggle="modal" data-target="#modal-setor"><i class="fas fa-plus"></i> Novo Setor</button>
 
     <div class="card">
-        <div class="card-header table-header bg-primary mb-3">Setores</div>
+        <div class="card-header table-header mb-3 bg-mcm"><i class="far fa-building" style='font-size:22px'></i> Setores</div>
         <div class="card-body table-responsive">          
             <table class="table table-hover ">
-                <thead class="bg-light font-weight-bold text-dark text-capitalize">
+                <thead class="bg-light-gray  text-mcm text-uppercase">
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Nome</th>
@@ -22,12 +22,12 @@
                         <td>5</td>
                         <td>Normal</td>
                         <td>                          
-                            <a href="#"  data-toggle="modal" data-target="#modal-setor" class="edit mr-2">
-                               <i class="far fa-edit text-primary" style="font-size:25px;"></i>
+                            <a href="#"  data-toggle="modal" data-target="#modal-setor" class="edit mr-1" style="text-decoration: none;" >
+                               <i class="far fa-edit text-primary" style="font-size:22px;"></i>
                             </a>
                            
-                            <a href="#" data-toggle="modal" data-target="#modal-setor">
-                                <i class="fas fa-trash-alt text-danger "style="font-size:25px;"></i>
+                            <a href="#" data-toggle="modal" data-target="#modal-setor-exclusao" class="ml-1">
+                                <i class="fas fa-trash-alt text-danger "style="font-size:22px;"></i>
                             </a>
                         </td>
                     </tr>
@@ -36,12 +36,13 @@
                         <td>Teste</td>
                         <td>3</td>
                         <td>Normal</td>
-                        <td>
-                            <a href="#" data-toggle="modal" data-target="#modal-setor">
-                                <img src="/assets/edit.svg" alt="" width="22" height="22" title="Editar">
+                         <td>                          
+                            <a href="#"  data-toggle="modal" data-target="#modal-setor" class="edit mr-1" style="text-decoration: none;" >
+                               <i class="far fa-edit text-primary" style="font-size:22px;"></i>
                             </a>
-                            <a href="#" data-toggle="modal" data-target="#modal-setor">
-                                <img src="/assets/delete.svg" alt="" width="22" height="22" title="Excluir">
+                           
+                            <a href="#" data-toggle="modal" data-target="#modal-setor-exclusao" class="ml-1">
+                                <i class="fas fa-trash-alt text-danger "style="font-size:22px;"></i>
                             </a>
                         </td>
                     </tr>
@@ -50,12 +51,13 @@
                         <td>Suporte</td>
                         <td>8</td>
                         <td>Normal</td>
-                        <td>
-                            <a href="#" data-toggle="modal" data-target="#modal-setor">
-                                <img src="/assets/edit.svg" alt="" width="22" height="22" title="Editar">
+                         <td>                          
+                            <a href="#"  data-toggle="modal" data-target="#modal-setor" class="edit mr-1" style="text-decoration: none;" >
+                               <i class="far fa-edit text-primary" style="font-size:22px;"></i>
                             </a>
-                            <a href="#" data-toggle="modal" data-target="#modal-setor">
-                                <img src="/assets/delete.svg" alt="" width="22" height="22" title="Excluir">
+                           
+                            <a href="#" data-toggle="modal" data-target="#modal-setor-exclusao" class="ml-1">
+                                <i class="fas fa-trash-alt text-danger "style="font-size:22px;"></i>
                             </a>
                         </td>
                     </tr>
@@ -64,3 +66,71 @@
         </div>
     </div>
 </section>
+
+   <!-- Modal Setor -->
+    <div class="modal fade" id="modal-setor" tabindex="-1" role="dialog" aria-labelledby="modalSetor" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white text-uppercase font-weight-bold" id="modalSetor">Setor</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">                    
+                    <form id="formSetor" novalidate autocomplete="off">
+                        <div class="row">
+                            <div class="form-group col-12">
+                                <label for="Nome">Nome:</label>
+                                <input type="text" name="Nome" id="Nome" placeholder="Digite o nome" class="form-control" required maxlength="100" minlength="3">
+                                <input type="hidden" name="Id" id="Id">
+                                <div class="invalid-feedback">Digite um nome válido.</div>
+                            </div>
+                            <div class="form-group col-12 js-status">
+                                <label for="status">Status:</label>
+                                <select class="form-control" name="Status"  id="Status">
+                                    <option value="0" selected>Normal</option>
+                                    <option value="1">Bloqueado</option>
+                                    <option value="2">Excluído</option>
+                                </select>
+                            </div>
+                            <div class="col-12 text-right py-1">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-times-circle"></i> Cancelar</button>
+                                <button type="submit" ><i class="far fa-save"></i> Salvar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Setor-->
+
+
+    
+   <!-- Modal Exclusão -->
+    <div class="modal fade" id="modal-setor-exclusao" tabindex="-1" role="dialog" aria-labelledby="modal-setor-exclusao" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white ">
+                    <h5 class="modal-title text-uppercase font-weight-bold" id="modal-setor-exclusao"><i class="fas fa-trash-alt"></i> Excluir setor</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">     
+                    <div class="row">            
+                        <div class="form-group col-12">
+                         <p>Deseja excluir o setor?</p>
+                        </div>
+                          <div class="col-12 text-right py-1">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-times-circle"></i> Cancelar</button>
+                            <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i> Excluir</button>
+                         </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
