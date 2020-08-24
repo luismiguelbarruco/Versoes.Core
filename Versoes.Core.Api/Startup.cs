@@ -22,6 +22,13 @@ namespace Versoes.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => options.AddPolicy("AllowSpecificOrigin", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
             services.AddControllers();
             services.AddMvc(option => option.EnableEndpointRouting = false);
             services.ConfigureCors();
@@ -37,16 +44,6 @@ namespace Versoes.Api
 
             // AutoMapper Settings
             services.AddAutoMapperConfiguration();
-
-            services.AddCors(options => options.AddPolicy("AllowSpecificOrigin", builder =>
-            {
-                builder.AllowAnyOrigin()
-                       .AllowAnyMethod()
-                       .AllowAnyHeader();
-            }));
-
-          
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,14 +54,16 @@ namespace Versoes.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(x => x
+             .AllowAnyOrigin()
+             .AllowAnyMethod()
+             .AllowAnyHeader());
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseCors(x => x
-               .AllowAnyOrigin()
-               .AllowAnyMethod()
-               .AllowAnyHeader());
+          
 
             app.UseForwardedHeaders(new ForwardedHeadersOptions
             {

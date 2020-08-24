@@ -13,6 +13,7 @@ namespace Versoes.Api.Controllers
 {
 
     [Route("api/setores")]
+    [EnableCors("AllowSpecificOrigin")]
     [ApiController]
     public class SetorController : ApiController
     {
