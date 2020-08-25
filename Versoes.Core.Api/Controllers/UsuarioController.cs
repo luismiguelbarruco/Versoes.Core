@@ -67,11 +67,7 @@ namespace Versoes.Api.Controllers
             }
         }
 
-<<<<<<< HEAD
         [HttpPut("usuario")]
-=======
-        [HttpPut]
->>>>>>> 0a70d4a91c4b17cda9351c33c8dd759adda7bec8
         public async Task<IResult> Put([FromBody] UsuarioForUpdateViewModel usuarioForUpdateVireModel)
         {
             try
