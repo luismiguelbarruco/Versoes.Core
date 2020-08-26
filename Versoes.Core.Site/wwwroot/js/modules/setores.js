@@ -1,45 +1,82 @@
 import { api } from '../modules/api.js';
+import { modalsucesso, modalerro } from '../modules/modal-helper.js';
 
 export default function initSetores() {
-    const apiSetores = api + '/setores';
 
+    const apiSetores = api + '/setores';
     document.querySelector('#formSetor').addEventListener("submit", handleSubmit);
+
 
     function handleSubmit(event) {
         event.preventDefault();
         event.stopPropagation();
 
         if (this.checkValidity()) {
-
-            const dados = [];
             const Nome = this.querySelector('#Nome').value;
-            const Id = this.querySelector('#Id').value;
-            const Status = this.querySelector('#Status').value;
-            dados.push({ Id, Nome, Status });
-            gravarDados(dados);
+            const Id = +this.querySelector('#Id').value;
+            const Status = +this.querySelector('#Status').value;
 
+            // console.log(JSON.stringify({ Id, Nome, Status }));
+            if (Id) {
+                handlePutSetor({ Id, Nome, Status })
+            } else {
+                handlePostSetor({ Nome, Status });
+            }
         }
         this.classList.add('was-validated');
     }
 
-    function gravarDados(dados) {
+    async function handlePutSetor(dados) {
 
-        if (dados.Id) {
+        try {
+            const response = await axios.put(apiSetores, dados);
 
-        } else {
-            console.log(dados);
-
-
-            axios.post(apiSetores, dados, {
-                    headers: {
-                        "Content-Type": "application/json;charset=UTF-8"
+            if (response.data.success) {
+                modalsucesso.fire({
+                    text: response.data.message,
+                    onClose: () => {
+                        $('#modal-setor').modal('hide');
                     }
-                })
-                .then(function(response) {
-                    console.log(response);
                 });
+            } else {
+                modalerro.fire({
+                    text: response.data.message
+                });
+            }
+
+        } catch (err) {
+            modalerro.fire({
+                text: 'Erro inesperado ao atualizar setor'
+            });
+            console.error(err);
         }
-    }
+    };
+
+    async function handlePostSetor(dados) {
+
+        try {
+            const response = await axios.post(apiSetores, dados);
+
+            if (response.data.success) {
+                modalsucesso.fire({
+                    text: response.data.message,
+                    onClose: () => {
+                        $('#modal-setor').modal('hide');
+                    }
+                });
+            } else {
+                modalerro.fire({
+                    text: response.data.message
+                });
+            }
+
+        } catch (err) {
+            modalerro.fire({
+                text: 'Erro inesperado ao cadastrar setor'
+            });
+            console.error(err);
+        }
+    };
 
     function listarSetores() {
         axios.get(apiSetores)
@@ -51,6 +88,11 @@ export default function initSetores() {
     /*Evento acionado ao abril modal */
     $('#modal-setor').on('show.bs.modal', function(event) {
         handleModalStyleByOperation(event.relatedTarget, this, 'Setor');
+    });
+
+    //gambiarra para ter foco no primeiro campo do modal, ver depois outra forma de fazer
+    $('#modal-setor').on('shown.bs.modal', function() {
+        $('#Nome').trigger('focus');
     });
 
     /*Evento acionado ao fechar modal*/

@@ -8,6 +8,6 @@ namespace Versoes.Core.Domain.ViewModels
 
         public string Nome { get; set; } = string.Empty;
 
-        public StatusDeCadastro Status { get; set; } = StatusDeCadastro.Normal;
+        public StatusDeCadastro Status { get; set; }
     }
 }
