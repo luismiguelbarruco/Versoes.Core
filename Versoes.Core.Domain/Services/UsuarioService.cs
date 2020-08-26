@@ -1,6 +1,7 @@
 using AutoMapper;
 using Flunt.Notifications;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Versoes.Core.Domain.Commands;
 using Versoes.Core.Domain.Commands.Validations;
@@ -20,6 +21,24 @@ namespace Versoes.Core.Domain.Services
         {
             _mapper = mapper;
             _repository = repository;
+        }
+
+        public async Task<IEnumerable<UsuarioViewModel>> GetAllUsuaruiosAsync()
+        {
+            var usuarios = await _repository.Usuario.GetAllUsuariosAsync();
+
+            var usuariosResult = _mapper.Map<IEnumerable<UsuarioViewModel>>(usuarios);
+
+            return usuariosResult;
+        }
+
+        public async Task<UsuarioViewModel> GetUsuaruiByIdAsync(long id)
+        {
+            var usuario = await _repository.Usuario.GetUsuarioByIdAsync(id);
+
+            var usuarioResult = _mapper.Map<UsuarioViewModel>(usuario);
+
+            return usuarioResult;
         }
 
         public async Task<IResult> InserirAsync(UsuarioForCreationViewModel usuarioForCreationViewModel)

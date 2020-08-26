@@ -10,6 +10,7 @@ namespace Versoes.Core.Domain.AutoMapper
         {
             CreateMap<Projeto, ProjetoViewModel>();
             CreateMap<Setor, SetorViewModel>();
+            CreateMap<Usuario, UsuarioViewModel>();
         }
     }
 }
