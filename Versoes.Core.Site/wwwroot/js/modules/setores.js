@@ -5,26 +5,12 @@ export default function initSetores() {
 
     const apiSetores = api + '/setores';
     document.querySelector('#formSetor').addEventListener("submit", handleSubmit);
+    const tbodySetor = document.querySelector('#tableSetores tbody');
 
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        event.stopPropagation();
+    handleGetSetores();
 
-        if (this.checkValidity()) {
-            const Nome = this.querySelector('#Nome').value;
-            const Id = +this.querySelector('#Id').value;
-            const Status = +this.querySelector('#Status').value;
 
-            // console.log(JSON.stringify({ Id, Nome, Status }));
-            if (Id) {
-                handlePutSetor({ Id, Nome, Status })
-            } else {
-                handlePostSetor({ Nome, Status });
-            }
-        }
-        this.classList.add('was-validated');
-    }
 
     async function handlePutSetor(dados) {
 
@@ -78,11 +64,96 @@ export default function initSetores() {
         }
     };
 
-    function listarSetores() {
-        axios.get(apiSetores)
-            .then(function(response) {
-                console.log(response);
+    async function handleGetSetores() {
+        const linha = document.createElement('tr');
+        linha.innerHTML = ('<td colspan="5" class="text-center text-mcm">Carregando setores...</td>');
+        tbodySetor.insertBefore(linha, null);
+        try {
+            const response = await axios.get(apiSetores);
+
+            if (response.data.success) {
+                adicionarSetorNaTabela(response.data.data);
+            } else {
+                adicionarSetorNaTabela(null);
+                modalerro.fire({
+                    text: response.data.message
+                });
+            }
+        } catch (err) {
+            modalerro.fire({
+                text: 'Falha de comunicação com a API'
             });
+            adicionarSetorNaTabela(null);
+            //onsole.error(err);
+        }
+    }
+
+
+    function adicionarSetorNaTabela(data) {
+
+        if (!tbodySetor)
+            return;
+
+        tbodySetor.innerHTML = "";
+        if (!data) {
+            const linha = document.createElement('tr');
+            linha.innerHTML = ('<td colspan="5" class="text-center text-mcm">Nenhum registro foi encontrado</td>');
+
+            tbodySetor.insertBefore(linha, null);
+            return;
+        }
+
+        data.forEach((setor) => {
+
+            const linha = document.createElement('tr');
+            const colunaId = document.createElement('td');
+            colunaId.innerHTML = "<b>" + setor.id + "</b>";
+
+            const colunaNome = document.createElement('td');
+            const contentNome = document.createTextNode(setor.nome);
+            colunaNome.appendChild(contentNome);
+
+
+            const colunaStatus = document.createElement('td');
+            if (setor.status === 0)
+                colunaStatus.innerHTML = "<span class='badge badge-pill badge-success' style='font-size:90%; font-weight:500'>Normal</span>";
+            else
+                colunaStatus.innerHTML = "<span class='text-danger'>Bloqueado </span>";
+
+
+            const colunaAcao = document.createElement('td');
+            colunaAcao.innerHTML = "<a href='#' data-toggle='modal' data-target='#modal-setor' data-id='" + setor.id + "'  class='edit mr-1'> <i class='far fa-edit text-primary' ></i>" +
+                "<a href='#' data-toggle='modal' data-target='#modal-setor-exclusao' data-id='" + setor.id + "' data-nome='" + setor.nome + "' > " +
+                "<i class='fas fa-trash-alt text-danger ' ></i></a>";
+
+            linha.appendChild(colunaId);
+            linha.appendChild(colunaNome);
+            linha.appendChild(colunaStatus);
+            linha.appendChild(colunaAcao);
+
+
+            tbodySetor.insertBefore(linha, null);
+        });
+
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (this.checkValidity()) {
+            const Nome = this.querySelector('#Nome').value;
+            const Id = +this.querySelector('#Id').value;
+            const Status = +this.querySelector('#Status').value;
+
+            // console.log(JSON.stringify({ Id, Nome, Status }));
+            if (Id) {
+                handlePutSetor({ Id, Nome, Status })
+            } else {
+                handlePostSetor({ Nome, Status });
+            }
+        }
+        this.classList.add('was-validated');
     }
 
     /*Evento acionado ao abril modal */
