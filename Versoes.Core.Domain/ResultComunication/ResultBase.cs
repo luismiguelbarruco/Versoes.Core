@@ -5,7 +5,7 @@ namespace Versoes.Core.Domain.ResultComunication
 {
     public abstract class ResultBase : IResult
     {
-        public bool Sucess { get; set; }
+        public bool Success { get; set; }
         public string Message { get; set; }
         public object Data { get; set; }
 
@@ -13,26 +13,26 @@ namespace Versoes.Core.Domain.ResultComunication
 
         public ResultBase(string message)
         {
-            Sucess = true;
+            Success = true;
             Message = message;
         }
 
-        public ResultBase(bool sucess, object data)
+        public ResultBase(bool success, object data)
         {
-            Sucess = sucess;
+            Success = success;
             Data = data;
         }
 
-        public ResultBase(bool sucess, string message)
+        public ResultBase(bool success, string message)
         {
-            Sucess = sucess;
+            Success = success;
             Message = message;
         }
 
-        public ResultBase(bool sucess, string message, IReadOnlyCollection<Notification> notifications)
-            : this(sucess, notifications)
+        public ResultBase(bool success, string message, IReadOnlyCollection<Notification> notifications)
+            : this(success, notifications)
         {
-            Sucess = sucess;
+            Success = success;
             Message = message;
         }
     }

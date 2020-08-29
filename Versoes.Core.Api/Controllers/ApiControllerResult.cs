@@ -15,18 +15,18 @@ namespace Versoes.Core.Api.Controllers
         {
         }
 
-        public ApiControllerResult(bool sucess, object data)
-            : base(sucess, data)
+        public ApiControllerResult(bool success, object data)
+            : base(success, data)
         {
         }
 
-        public ApiControllerResult(bool sucess, string message)
-            : base(sucess, message)
+        public ApiControllerResult(bool success, string message)
+            : base(success, message)
         {
         }
 
-        public ApiControllerResult(bool sucess, string message, IReadOnlyCollection<Notification> notifications) 
-            : base(sucess, message, notifications)
+        public ApiControllerResult(bool success, string message, IReadOnlyCollection<Notification> notifications) 
+            : base(success, message, notifications)
         {
         }
     }

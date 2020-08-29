@@ -10,13 +10,13 @@ namespace Versoes.Core.Domain.Services
         {
         }
 
-        public ServiceResult(bool sucess, string message) 
-            : base(sucess, message)
+        public ServiceResult(bool success, string message) 
+            : base(success, message)
         {
         }
 
-        public ServiceResult(bool sucess, string message, IReadOnlyCollection<Notification> notifications) 
-            : base(sucess, message, notifications)
+        public ServiceResult(bool success, string message, IReadOnlyCollection<Notification> notifications) 
+            : base(success, message, notifications)
         {
         }
     }

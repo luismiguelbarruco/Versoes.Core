@@ -1,75 +1,84 @@
-﻿  html {
-      position: relative;
-      min-height: 100%;
-  }
-  
-  body {
-      /* Margin bottom by footer height */
-      margin-bottom: 60px;
-  }
-  
-  .footer {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      white-space: nowrap;
-      line-height: 60px;
-      /* Vertically center the text there */
-  }
-  
-  label {
-      font-weight: 600;
-      color: #333;
-  }
-  
-  .bg-mcm {
-      background: #2A558C
-  }
-  
-  .bg-menu {
-      background: #27498C;
-  }
-  
-  .text-mcm {
-      color: #020659;
-  }
-  
-  .bg-light-gray {
-      background: #e9ecef
-  }
-  
-  .nav-item {
-      font-weight: 600;
-  }
-  /* CARDS */
-  
-  .table-header {
-      color: #FFF;
-      font-weight: bold;
-      text-transform: uppercase;
-  }
-  /*Table Hover */
-  
-  .table-hover tbody tr:hover {
-      background-color: rgba(0, 123, 255, .25);
-  }
-  /* Divider icons */
-  
-  .edit::after {
-      content: '';
-      border-right: 2px solid #a9afb5;
-      padding-top: 4px;
-  }
-  /* Sobreescrever borda verde e icone de campos válidos do boostrap padrão*/
-  
-  .form-control.is-valid,
-  .was-validated .form-control:valid {
-      border-color: #ced4da;
-      background-image: none;
-  }
-  
-  .form-control.is-valid:focus,
-  .was-validated .form-control:valid:focus {
-      border-color: #80bdff;
-      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
-  }
+﻿      html {
+          position: relative;
+          min-height: 100%;
+      }
+      
+      body {
+          /* Margin bottom by footer height */
+          margin-bottom: 60px;
+      }
+      
+      .footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          white-space: nowrap;
+          line-height: 60px;
+          /* Vertically center the text there */
+      }
+      
+      label {
+          font-weight: 600;
+          color: #333;
+      }
+      
+      .bg-mcm {
+          background: #2A558C
+      }
+      
+      .bg-menu {
+          background: #27498C;
+      }
+      
+      .text-mcm {
+          color: #020659;
+      }
+      
+      .bg-light-gray {
+          background: #e9ecef
+      }
+      
+      .nav-item {
+          font-weight: 600;
+      }
+      /* CARDS */
+      
+      .table-header {
+          color: #FFF;
+          font-weight: bold;
+          text-transform: uppercase;
+      }
+      /*Table Hover */
+      
+      .table-hover tbody tr:hover {
+          background-color: rgba(0, 123, 255, .25);
+      }
+      /* Divider icons */
+      
+      .edit::after {
+          content: '';
+          border-right: 2px solid #a9afb5;
+          padding-top: 4px;
+          margin-left: 7px;
+      }
+      
+      #tableSetores>tbody i {
+          font-size: 22px;
+      }
+      
+      #tableSetores>tbody a {
+          text-decoration: none;
+      }
+      /* Sobreescrever borda verde e icone de campos válidos do boostrap padrão*/
+      
+      .form-control.is-valid,
+      .was-validated .form-control:valid {
+          border-color: #ced4da;
+          background-image: none;
+      }
+      
+      .form-control.is-valid:focus,
+      .was-validated .form-control:valid:focus {
+          border-color: #80bdff;
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+      }

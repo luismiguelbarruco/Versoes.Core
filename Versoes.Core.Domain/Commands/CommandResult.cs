@@ -15,13 +15,13 @@ namespace Versoes.Core.Domain.Commands
         {
         }
 
-        public CommandResult(bool sucess, string message)
-            : base(sucess, message)
+        public CommandResult(bool success, string message)
+            : base(success, message)
         {
         }
 
-        public CommandResult(bool sucess, string message, IReadOnlyCollection<Notification> notifications)
-            : base(sucess, message, notifications)
+        public CommandResult(bool success, string message, IReadOnlyCollection<Notification> notifications)
+            : base(success, message, notifications)
         {
         }
     }
