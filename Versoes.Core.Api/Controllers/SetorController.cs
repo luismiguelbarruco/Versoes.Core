@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Cors;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 using System;
@@ -14,6 +15,7 @@ namespace Versoes.Api.Controllers
 
     [Route("api/setores")]
     [EnableCors("AllowSpecificOrigin")]
+    [Authorize]
     [ApiController]
     public class SetorController : ApiController
     {
@@ -71,7 +73,7 @@ namespace Versoes.Api.Controllers
         {
             try
             {
-                if (!setorForCreationViewModel.Validate())
+                if (!ValidadeModel(setorForCreationViewModel))
                     return ValidationViewModelResult("Não foi possivel cadastrar setor", setorForCreationViewModel.Notifications);
 
                 var result = await _setorSerive.InserirAsync(setorForCreationViewModel);

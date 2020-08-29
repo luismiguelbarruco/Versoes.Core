@@ -5,6 +5,7 @@
         public int Id { get; set; }
         public string Nome { get; set; }
         public StatusDeCadastro Status { get; set; }
+        public string Sigla { get; set; }
         public string Login { get; set; }
         public string Senha { get; set; }
         public int SetorId { get; set; }

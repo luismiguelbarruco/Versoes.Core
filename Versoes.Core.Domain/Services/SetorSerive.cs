@@ -1,13 +1,14 @@
 using AutoMapper;
 using Flunt.Notifications;
-using Versoes.Core.Domain.Commands;
-using Versoes.Core.Domain.ViewModels;
-using Versoes.Core.Domain.Handlers;
-using Versoes.Core.Domain.Repositories;
-using System.Threading.Tasks;
-using Versoes.Core.Domain.ResultComunication;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Versoes.Core.Domain.Commands;
+using Versoes.Core.Domain.Handlers;
+using Versoes.Core.Domain.Repositories;
+using Versoes.Core.Domain.ResultComunication;
+using Versoes.Core.Domain.ViewModels;
 
 namespace Versoes.Core.Domain.Services
 {
@@ -26,7 +27,14 @@ namespace Versoes.Core.Domain.Services
         {
             var setores = await _repository.Setor.GetAllSetoresAsync();
 
-            var setoresResult = _mapper .Map<IEnumerable<SetorViewModel>>(setores);
+            var setoresResult = _mapper.Map<IEnumerable<SetorViewModel>>(setores);
+
+            setoresResult.ToList().ForEach(setor =>
+            {
+                var count = _repository.Usuario.FindByCondition(u => u.SetorId == setor.Id).Count();
+
+                setor.TotalUsuariosPorSetor = count;
+            });
 
             return setoresResult;
         }
@@ -36,6 +44,10 @@ namespace Versoes.Core.Domain.Services
             var setor = await _repository.Setor.GetSetorByIdAsync(id);
 
             var setorResult = _mapper.Map<SetorViewModel>(setor);
+
+            var count = _repository.Usuario.FindByCondition(u => u.SetorId == setor.Id).Count();
+
+            setorResult.TotalUsuariosPorSetor = count;
 
             return setorResult;
         }

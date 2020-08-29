@@ -1,16 +1,15 @@
 ﻿using Versoes.Entities;
-using Versoes.Entities.Models;
 
 namespace Versoes.Core.Domain.Commands.Validations
 {
     public class AlterarUsuarioCommand : UsuarioCommand
     {
-        public AlterarUsuarioCommand(int id, string nome, string sigla, Setor setor, StatusDeCadastro status, string login, string senha)
+        public AlterarUsuarioCommand(int id, string nome, string sigla, int setorId, StatusDeCadastro status, string login, string senha)
         {
             Id = id;
             Nome = nome;
             Sigla = sigla;
-            Setor = setor;
+            SetorId = setorId;
             Status = status;
             Login = login;
             Senha = senha;

@@ -8,5 +8,12 @@ namespace Versoes.Core.Domain.Repositories
     {
         Task<IEnumerable<Usuario>> GetAllUsuariosAsync();
         Task<Usuario> GetUsuarioByIdAsync(long id);
+        Task<Usuario> GetUsuarioByNomeAsync(string nome);
+        Task<Usuario> GetSetorByNameAndDiferentIdAsync(long id, string nome);
+        Task<Usuario> GetUsuarioByLoginAsync(string login);
+        Task<Usuario> GetSetorByLoginAndDiferentIdAsync(long id, string login);
+        Task<Usuario> GetUsuarioBySiglaAsync(string sigla);
+        Task<Usuario> GetSetorBySiglaAndDiferentIdAsync(long id, string sigla);
+        Task<Usuario> GetUsuarioAsync(string login, string password);
     }
 }

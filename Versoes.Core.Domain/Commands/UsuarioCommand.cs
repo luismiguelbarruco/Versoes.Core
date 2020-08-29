@@ -9,7 +9,7 @@ namespace Versoes.Core.Domain.Commands
         public int Id { get; protected set; }
         public string Nome { get; protected set; }
         public string Sigla { get; protected set; }
-        public Setor Setor { get; protected set; }
+        public int SetorId { get; protected set; }
         public StatusDeCadastro Status { get; protected set; }
         public string Login { get; protected set; }
         public string Senha { get; protected set; }
@@ -40,8 +40,7 @@ namespace Versoes.Core.Domain.Commands
         protected void ValidateSetor()
         {
             AddNotifications(new Contract()
-                .IsNull(Setor, nameof(Setor), "Obrigatório informar um setor")
-                .AreNotEquals(0, Setor.Id, nameof(Setor.Id), "Obrigatório informar um setor com id válido")
+                .AreNotEquals(0, SetorId, nameof(Setor.Id), "Obrigatório informar um setor com id válido")
             );
         }
 
@@ -49,7 +48,7 @@ namespace Versoes.Core.Domain.Commands
         {
             AddNotifications(new Contract()
                 .IsNotNullOrEmpty(Login, nameof(Login), "Login é obrigatório")
-                .HasMaxLen(Nome, 20, nameof(Nome), "Login não pode ser maior que 20 caracteres.")
+                .HasMaxLen(Nome, 20, nameof(Login), "Login não pode ser maior que 20 caracteres.")
             );
         }
 

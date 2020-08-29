@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Versoes.Core.Domain.Commands;
+using Versoes.Core.Domain.Commands.Validations;
 using Versoes.Core.Domain.ViewModels;
 
 namespace Versoes.Core.Domain.AutoMapper
@@ -17,12 +18,20 @@ namespace Versoes.Core.Domain.AutoMapper
                 .ForMember(p => p.ValidationResult, opt => opt.Ignore());
 
             CreateMap<SetorForCreationViewModel, CadastrarSetorCommand>()
-                .ConstructUsing(p => new CadastrarSetorCommand(p.Nome, p.Status))
-                .ForMember(p => p.ValidationResult, opt => opt.Ignore());
+                .ConstructUsing(s => new CadastrarSetorCommand(s.Nome, s.Status))
+                .ForMember(s => s.ValidationResult, opt => opt.Ignore());
 
             CreateMap<SetorForUpdateViewModel, AlterarSetorCommand>()
-                .ConstructUsing(p => new AlterarSetorCommand(p.Id, p.Nome, p.Status))
-                .ForMember(p => p.ValidationResult, opt => opt.Ignore());
+                .ConstructUsing(s => new AlterarSetorCommand(s.Id, s.Nome, s.Status))
+                .ForMember(s => s.ValidationResult, opt => opt.Ignore());
+
+            CreateMap<UsuarioForCreationViewModel, CadastrarUsuarioCommand>()
+                .ConstructUsing(u => new CadastrarUsuarioCommand(u.Nome, u.Sigla, u.Setor.Id, u.Status, u.Login, u.Senha))
+                .ForMember(u => u.ValidationResult, opt => opt.Ignore());
+
+            CreateMap<UsuarioForUpdateViewModel, AlterarUsuarioCommand>()
+                .ConstructUsing(u => new AlterarUsuarioCommand(u.Id, u.Nome, u.Sigla, u.Setor.Id, u.Status, u.Login, u.Senha))
+                .ForMember(u => u.ValidationResult, opt => opt.Ignore());
         }
     }
 }

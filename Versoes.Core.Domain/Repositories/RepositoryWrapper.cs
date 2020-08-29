@@ -12,11 +12,11 @@ namespace Versoes.Core.Domain.Repositories
         private IRequisitoRepository requisitoRepository;
         private IBugRepository bugRepository;
 
-        public ISetorRepository Setor => setorRepository ?? (setorRepository = new SetorRepository(repositoryContext));
-        public IUsuarioRepository Usuario => usuarioRepository ?? (usuarioRepository = new UsuarioRepository(repositoryContext));
-        public IProjetoRepository Projeto => projetoRepository ?? (projetoRepository = new ProjetoRepository(repositoryContext));
-        public IRequisitoRepository Requisito => requisitoRepository ?? (requisitoRepository = new RequisitoRepository(repositoryContext));
-        public IBugRepository Bug => bugRepository ?? (bugRepository = new BugRepository(repositoryContext));
+        public ISetorRepository Setor => setorRepository ??= new SetorRepository(repositoryContext);
+        public IUsuarioRepository Usuario => usuarioRepository ??= new UsuarioRepository(repositoryContext);
+        public IProjetoRepository Projeto => projetoRepository ??= new ProjetoRepository(repositoryContext);
+        public IRequisitoRepository Requisito => requisitoRepository ??= new RequisitoRepository(repositoryContext);
+        public IBugRepository Bug => bugRepository ??= new BugRepository(repositoryContext);
 
         public RepositoryWrapper(RepositoryContext repositoryContext) => this.repositoryContext = repositoryContext;
 
