@@ -1,23 +1,24 @@
-﻿
-
-using Flunt.Notifications;
+﻿using Flunt.Notifications;
 using System.Collections.Generic;
+using Versoes.Core.Domain.ViewModels.Validations;
 
 namespace Versoes.Core.Domain.ViewModels
 {
     public class UsuarioForCreationViewModel : UsuarioViewModel, IViewModel
     {
-        public new IReadOnlyCollection<Notification> Notifications { get; set; }
+        public IReadOnlyCollection<Notification> Notifications { get; set; }
 
         public bool Validate()
         {
-            ValidateNome();
-            ValidateSigla();
-            ValidateSetor();
-            ValidateLogin();
-            ValidateSenha();
+            var validation = new CadastrarUsuarioValidation(this);
 
-            return ValidationResult;
+            if (validation.Invalid)
+            {
+                Notifications = validation.Notifications;
+                return false;
+            }
+
+            return true;
         }
     }
 }

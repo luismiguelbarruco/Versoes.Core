@@ -2,8 +2,7 @@
 {
     public class AlterarSetorValidation : SetorValidation<SetorForUpdateViewModel>
     {
-
-        public AlterarSetorValidation(SetorForUpdateViewModel viewModel) 
+        public AlterarSetorValidation(SetorForUpdateViewModel viewModel)
             : base(viewModel)
         {
             ValidateId();

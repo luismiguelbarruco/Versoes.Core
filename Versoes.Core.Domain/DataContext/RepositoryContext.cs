@@ -28,6 +28,50 @@ namespace Versoes.Entities
             modelBuilder.ApplyConfiguration(new SetorConfiguration());
             modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
             modelBuilder.ApplyConfiguration(new ProjetoConfiguration());
+
+            modelBuilder.Entity<Setor>().HasData(
+                new Setor
+                {
+                    Id = 1,
+                    Nome = "Desenvolvimento",
+                    Status = StatusDeCadastro.Normal
+                },
+                new Setor
+                {
+                    Id = 2,
+                    Nome = "Suporte",
+                    Status = StatusDeCadastro.Normal
+                },
+                new Setor
+                {
+                    Id = 3,
+                    Nome = "Teste",
+                    Status = StatusDeCadastro.Normal
+                },
+                new Setor
+                {
+                    Id = 4,
+                    Nome = "Financeiro",
+                    Status = StatusDeCadastro.Normal
+                },
+                new Setor
+                {
+                    Id = 5,
+                    Nome = "Admin",
+                    Status = StatusDeCadastro.Normal
+                }
+            );
+
+            modelBuilder.Entity<Usuario>().HasData(new Usuario 
+            { 
+                Id = 1,
+                Login = "admin",
+                Senha = "admin123",
+                Nome = "Administrador",
+                Sigla = "ADM",
+                SetorId = 5,
+                Status = StatusDeCadastro.Normal
+            });
         }
     }
 }

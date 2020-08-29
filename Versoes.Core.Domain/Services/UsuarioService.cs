@@ -9,6 +9,7 @@ using Versoes.Core.Domain.Handlers;
 using Versoes.Core.Domain.Repositories;
 using Versoes.Core.Domain.ResultComunication;
 using Versoes.Core.Domain.ViewModels;
+using Versoes.Entities.Models;
 
 namespace Versoes.Core.Domain.Services
 {
@@ -16,11 +17,35 @@ namespace Versoes.Core.Domain.Services
     {
         private readonly IMapper _mapper;
         private readonly IRepositoryWrapper _repository;
+        private readonly ITokenService _tokenService;
 
-        public UsuarioService(IMapper mapper, IRepositoryWrapper repository)
+        public UsuarioService(IMapper mapper, IRepositoryWrapper repository, ITokenService tokenService)
         {
             _mapper = mapper;
             _repository = repository;
+            _tokenService = tokenService;
+        }
+
+        public string GenerateToken(Usuario usuario)
+        {
+            var token = _tokenService.GenerateToken(usuario);
+
+            return token;
+        }
+
+        public UsuarioAutenticadoViewModel CreateUsuarioAutenticado(string token, Usuario usuario)
+        {
+            var usuarioViewModel = _mapper.Map<UsuarioViewModel>(usuario);
+
+            usuarioViewModel.Senha = string.Empty;
+
+            var usuarioAutenticadoViewModel = new UsuarioAutenticadoViewModel
+            {
+                Token = token,
+                UsuarioViewModel = usuarioViewModel
+            };
+
+            return usuarioAutenticadoViewModel;
         }
 
         public async Task<IEnumerable<UsuarioViewModel>> GetAllUsuaruiosAsync()
@@ -32,13 +57,20 @@ namespace Versoes.Core.Domain.Services
             return usuariosResult;
         }
 
-        public async Task<UsuarioViewModel> GetUsuaruiByIdAsync(long id)
+        public async Task<UsuarioViewModel> GetUsuarioByIdAsync(long id)
         {
             var usuario = await _repository.Usuario.GetUsuarioByIdAsync(id);
 
             var usuarioResult = _mapper.Map<UsuarioViewModel>(usuario);
 
             return usuarioResult;
+        }
+
+        public async Task<Usuario> GetUsuarioAsync(string login, string password)
+        {
+            var usuario = await _repository.Usuario.GetUsuarioAsync(login, password);
+
+            return usuario;
         }
 
         public async Task<IResult> InserirAsync(UsuarioForCreationViewModel usuarioForCreationViewModel)

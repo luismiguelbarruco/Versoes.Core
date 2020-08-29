@@ -1,9 +1,23 @@
 using Flunt.Notifications;
+using System.Collections.Generic;
 
 namespace Versoes.Core.Domain.ViewModels
 {
-    public abstract class ViewModelBase : Notifiable
+    public abstract class ViewModelBase //: IViewModel
     {
-        public abstract bool ValidationResult { get; }
+        public IReadOnlyCollection<Notification> Notifications { get; set; }
+
+        //public bool Validate()
+        //{
+        //    //var validation = new AlterarSetorValidation(this);
+
+        //    if (validation.Invalid)
+        //    {
+        //        Notifications = validation.Notifications;
+        //        return false;
+        //    }
+
+        //    return true;
+        //}
     }
 }

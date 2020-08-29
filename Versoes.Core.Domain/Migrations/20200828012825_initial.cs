@@ -3,7 +3,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Versoes.Core.Domain.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -43,6 +43,7 @@ namespace Versoes.Core.Domain.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Nome = table.Column<string>(maxLength: 100, nullable: false),
                     Status = table.Column<byte>(nullable: false),
+                    Sigla = table.Column<string>(maxLength: 20, nullable: false),
                     Login = table.Column<string>(maxLength: 20, nullable: false),
                     Senha = table.Column<string>(maxLength: 20, nullable: false),
                     SetorId = table.Column<int>(nullable: false)
@@ -57,6 +58,23 @@ namespace Versoes.Core.Domain.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Setor",
+                columns: new[] { "Id", "Nome", "Status" },
+                values: new object[,]
+                {
+                    { 1, "Desenvolvimento", (byte)0 },
+                    { 2, "Suporte", (byte)0 },
+                    { 3, "Teste", (byte)0 },
+                    { 4, "Financeiro", (byte)0 },
+                    { 5, "Admin", (byte)0 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Usuario",
+                columns: new[] { "Id", "Login", "Nome", "Senha", "SetorId", "Sigla", "Status" },
+                values: new object[] { 1, "admin", "Administrador", "admin123", 5, "ADM", (byte)0 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Projeto_Nome",

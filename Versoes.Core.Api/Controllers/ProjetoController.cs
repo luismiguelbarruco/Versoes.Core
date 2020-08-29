@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Cors;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Internal;
 using Serilog;
@@ -14,6 +15,7 @@ namespace Versoes.Api.Controllers
 {
     [EnableCors("AllowSpecificOrigin")]
     [Route("api")]
+    [Authorize]
     [ApiController]
     public class ProjetoController : ApiController
     {

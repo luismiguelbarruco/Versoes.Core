@@ -9,8 +9,8 @@ using Versoes.Entities;
 namespace Versoes.Core.Domain.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20200822150512_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20200828012825_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -64,6 +64,38 @@ namespace Versoes.Core.Domain.Migrations
                         .IsUnique();
 
                     b.ToTable("Setor");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Nome = "Desenvolvimento",
+                            Status = (byte)0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Nome = "Suporte",
+                            Status = (byte)0
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Nome = "Teste",
+                            Status = (byte)0
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Nome = "Financeiro",
+                            Status = (byte)0
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Nome = "Admin",
+                            Status = (byte)0
+                        });
                 });
 
             modelBuilder.Entity("Versoes.Entities.Models.Usuario", b =>
@@ -91,6 +123,11 @@ namespace Versoes.Core.Domain.Migrations
                     b.Property<int>("SetorId")
                         .HasColumnType("integer");
 
+                    b.Property<string>("Sigla")
+                        .IsRequired()
+                        .HasColumnType("character varying(20)")
+                        .HasMaxLength(20);
+
                     b.Property<byte>("Status")
                         .HasColumnType("smallint");
 
@@ -108,6 +145,18 @@ namespace Versoes.Core.Domain.Migrations
                     b.HasIndex("SetorId");
 
                     b.ToTable("Usuario");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Login = "admin",
+                            Nome = "Administrador",
+                            Senha = "admin123",
+                            SetorId = 5,
+                            Sigla = "ADM",
+                            Status = (byte)0
+                        });
                 });
 
             modelBuilder.Entity("Versoes.Entities.Models.Usuario", b =>
