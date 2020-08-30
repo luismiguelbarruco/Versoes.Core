@@ -35,6 +35,9 @@ namespace Versoes.Api.Controllers
         {
             try
             {
+                if (!ValidadeModel(loginViewModel))
+                    return ValidationViewModelResult("Não foi possivel realizar login", loginViewModel.Notifications);
+
                 var usuario = await _usuarioService.GetUsuarioAsync(loginViewModel.Login, loginViewModel.Senha);
 
                 if (usuario == null)

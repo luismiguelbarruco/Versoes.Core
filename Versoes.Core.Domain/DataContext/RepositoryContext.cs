@@ -1,4 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
+using System.IO;
 using Versoes.Entities.Configurations;
 using Versoes.Entities.Models;
 
@@ -72,6 +75,25 @@ namespace Versoes.Entities
                 SetorId = 5,
                 Status = StatusDeCadastro.Normal
             });
+        }
+    }
+
+    public class RepositoryContextFactory : IDesignTimeDbContextFactory<RepositoryContext>
+    {
+        public RepositoryContext CreateDbContext(string[] args)
+        {
+            IConfigurationRoot configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile(@Directory.GetCurrentDirectory() + "../../Versoes.Core.Api/appsettings.json")
+                .Build();
+
+            var builder = new DbContextOptionsBuilder<RepositoryContext>();
+
+            var connectionString = configuration["postgresConnection:connectionString"];
+            
+            builder.UseNpgsql(connectionString);
+
+            return new RepositoryContext(builder.Options);
         }
     }
 }

@@ -44,7 +44,7 @@ namespace Versoes.Core.Domain.ViewModels.Validations
         {
             AddNotifications(new Contract()
                 .IsNotNullOrEmpty(_usuarioViewModel.Login, nameof(_usuarioViewModel.Login), "Login é obrigatório")
-                .HasMaxLen(_usuarioViewModel.Nome, 20, nameof(_usuarioViewModel.Nome), "Login não pode ser maior que 20 caracteres.")
+                .HasMaxLen(_usuarioViewModel.Login, 20, nameof(_usuarioViewModel.Login), "Login não pode ser maior que 20 caracteres.")
             );
         }
 
