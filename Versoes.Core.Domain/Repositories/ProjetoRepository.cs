@@ -29,6 +29,7 @@ namespace Versoes.Core.Domain.Repositories
 
         public async Task<Projeto> GetProjetoByNameAndDiferentIdAsync(string name, long id) =>
             await FindByCondition(p => p.Nome.Equals(name) && !p.Id.Equals(id))
+                .AsNoTracking()
                 .FirstOrDefaultAsync();
     }
 }
