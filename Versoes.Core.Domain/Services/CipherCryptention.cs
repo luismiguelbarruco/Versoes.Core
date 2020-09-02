@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Versoes.Core.Domain.Services
 {
-    public class CipherCryptention : ICryptention
+    public class CipherCryptography : ICryptography
     {
         private const string _key = "b14ca5898a4e4133bbce2ea2315a1916";
 

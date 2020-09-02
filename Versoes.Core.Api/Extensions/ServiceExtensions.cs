@@ -47,7 +47,7 @@ namespace Versoes.Api.Extensions
             services.AddScoped<IProjetoService, ProjetoService>();
             services.AddScoped<ITokenService, JwtTokenService>();
             services.AddScoped<IUsuarioService, UsuarioService>();
-            services.AddScoped<ICryptention, CipherCryptention>();
+            services.AddScoped<ICryptography, CipherCryptography>();
         }
 
         public static void AddAutoMapperConfiguration(this IServiceCollection services)

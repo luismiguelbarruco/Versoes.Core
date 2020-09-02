@@ -18,14 +18,14 @@ namespace Versoes.Core.Domain.Services
         private readonly IMapper _mapper;
         private readonly IRepositoryWrapper _repository;
         private readonly ITokenService _tokenService;
-        private readonly ICryptention _cryptention;
+        private readonly ICryptography _cryptography;
 
-        public UsuarioService(IMapper mapper, IRepositoryWrapper repository, ITokenService tokenService, ICryptention cryptention)
+        public UsuarioService(IMapper mapper, IRepositoryWrapper repository, ITokenService tokenService, ICryptography cryptography)
         {
             _mapper = mapper;
             _repository = repository;
             _tokenService = tokenService;
-            _cryptention = cryptention;
+            _cryptography = cryptography;
         }
 
         public string GenerateToken(Usuario usuario)
@@ -68,7 +68,7 @@ namespace Versoes.Core.Domain.Services
 
         public async Task<Usuario> GetUsuarioAsync(string login, string password)
         {
-            var passwordEncrypted = _cryptention.Encrypt(password);
+            var passwordEncrypted = _cryptography.Encrypt(password);
 
             var usuario = await _repository.Usuario.GetUsuarioAsync(login, passwordEncrypted);
 
@@ -79,7 +79,7 @@ namespace Versoes.Core.Domain.Services
         {
             var cadastrarUsuarioCommand = _mapper.Map<CadastrarUsuarioCommand>(usuarioForCreationViewModel);
 
-            var usuarioHandle = new UsuarioHandle(_mapper, _repository, _cryptention);
+            var usuarioHandle = new UsuarioHandle(_mapper, _repository, _cryptography);
 
             var result = await usuarioHandle.Handler(cadastrarUsuarioCommand);
 
@@ -90,7 +90,7 @@ namespace Versoes.Core.Domain.Services
         {
             var alterarUsuarioCommand = _mapper.Map<AlterarUsuarioCommand>(usuarioForUpdateVireModel);
 
-            var usuarioHandle = new UsuarioHandle(_mapper, _repository, _cryptention);
+            var usuarioHandle = new UsuarioHandle(_mapper, _repository, _cryptography);
 
             var result = await usuarioHandle.Handler(alterarUsuarioCommand);
 
