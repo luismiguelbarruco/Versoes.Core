@@ -82,15 +82,17 @@ namespace Versoes.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+            
+            app.UseCors(x => x
+           .AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader());
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseCors(x => x
-             .AllowAnyOrigin()
-             .AllowAnyMethod()
-             .AllowAnyHeader());
+          
 
             app.UseForwardedHeaders(new ForwardedHeadersOptions
             {

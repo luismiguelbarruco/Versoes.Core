@@ -11,12 +11,12 @@
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Nome</th>
+                            <th scope="col">Usuários</th>
                             <th scope="col" >Status</th>
                             <th scope="col" >Ações</th>
                         </tr>
                     </thead>
-                    <tbody>
-                      
+                    <tbody>                      
                     </tbody>
                 </table>
             </div> 
@@ -38,14 +38,14 @@
                     <form id="formSetor" novalidate autocomplete="off">
                         <div class="row">
                             <div class="form-group col-12">
-                                <label for="Nome">Nome:</label>
-                                <input type="text" name="Nome" id="Nome" placeholder="Digite o nome" class="form-control" required maxlength="100" minlength="3" >
-                                <input type="hidden" name="Id" id="Id">
+                                <label for="nome">Nome:</label>
+                                <input type="text" name="nome" id="nome" placeholder="Digite o nome" class="form-control" required maxlength="30" minlength="3" >
+                                <input type="hidden" name="id" id="id">
                                 <div class="invalid-feedback">Digite um nome válido.</div>
                             </div>
                             <div class="form-group col-12 js-status">
                                 <label for="status">Status:</label>
-                                <select class="form-control" name="Status"  id="Status">
+                                <select class="form-control" name="status"  id="status">
                                     <option value="0" selected>Normal</option>
                                     <option value="1">Bloqueado</option>
                                     <option value="2">Excluído</option>
@@ -67,6 +67,7 @@
     
    <!-- Modal Exclusão -->   
     <div class="modal fade" id="modal-setor-exclusao" tabindex="-1" role="dialog" aria-labelledby="modal-setor-exclusao" aria-hidden="true">
+        <form id="formExcluirSetor" novalidate >
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-danger text-white ">
@@ -78,9 +79,10 @@
                 <div class="modal-body">     
                     <div class="row">            
                         <div class="form-group col-12">
-                         <p>Deseja excluir o setor?</p>
-                        </div>
-                          <div class="col-12 text-right py-1">
+                            <p>Deseja excluir o setor <b class="setor-nome"></b>?</p>
+                            <input type="hidden" name="id">
+                        </div>                        
+                        <div class="col-12 text-right py-1">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-times-circle"></i> Cancelar</button>
                             <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i> Excluir</button>
                          </div>
@@ -89,6 +91,7 @@
                 </div>
             </div>
         </div>
+        </form>
     </div>
     <!-- Modal -->
 
