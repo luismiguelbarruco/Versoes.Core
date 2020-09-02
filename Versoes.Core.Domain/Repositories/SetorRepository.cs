@@ -29,6 +29,7 @@ namespace Versoes.Core.Domain.Repositories
 
         public async Task<Setor> GetSetorByNameAndDiferentIdAsync(string name, long id) =>
             await FindByCondition(setor => setor.Nome.Equals(name) && !setor.Id.Equals(id))
+                .AsNoTracking()
                 .FirstOrDefaultAsync();
     }
 }

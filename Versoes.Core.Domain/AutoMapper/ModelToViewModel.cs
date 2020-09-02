@@ -10,7 +10,8 @@ namespace Versoes.Core.Domain.AutoMapper
         {
             CreateMap<Projeto, ProjetoViewModel>();
             CreateMap<Setor, SetorViewModel>();
-            CreateMap<Usuario, UsuarioViewModel>();
+            CreateMap<Usuario, UsuarioViewModel>()
+                .ForPath(u => u.Senha, opt => opt.MapFrom(source => string.Empty));
         }
     }
 }

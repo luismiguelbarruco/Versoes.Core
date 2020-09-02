@@ -17,10 +17,12 @@ namespace Versoes.Core.Domain.Repositories
         public async Task<IEnumerable<Usuario>> GetAllUsuariosAsync() =>
             await FindAll()
                 .OrderBy(u => u.Nome)
+                .Include(s => s.Setor)
                 .ToListAsync();
 
         public async Task<Usuario> GetUsuarioByIdAsync(long id) =>
             await FindByCondition(u => u.Id == id)
+                .Include(s => s.Setor)
                 .FirstOrDefaultAsync();
 
         public async Task<Usuario> GetUsuarioByNomeAsync(string nome) =>
@@ -36,19 +38,23 @@ namespace Versoes.Core.Domain.Repositories
                 .FirstOrDefaultAsync();
 
         public async Task<Usuario> GetUsuarioAsync(string login, string password) =>
-            await FindByCondition(u => u.Login.Equals(login) && u.Senha.Equals(password)).Include(s => s.Setor)
+            await FindByCondition(u => u.Login.Equals(login) && u.Senha.Equals(password))
+                .Include(s => s.Setor)
                 .FirstOrDefaultAsync();
 
         public async Task<Usuario> GetSetorByNameAndDiferentIdAsync(long id, string nome) =>
             await FindByCondition(u => u.Id != id && u.Nome.Equals(nome))
+                .AsNoTracking()
                 .FirstOrDefaultAsync();
 
         public async Task<Usuario> GetSetorByLoginAndDiferentIdAsync(long id, string login) =>
             await FindByCondition(u => u.Id != id && u.Login.Equals(login))
+                .AsNoTracking()
                 .FirstOrDefaultAsync();
 
         public async Task<Usuario> GetSetorBySiglaAndDiferentIdAsync(long id, string sigla) =>
             await FindByCondition(u => u.Id != id && u.Login.Equals(sigla))
+                .AsNoTracking()
                 .FirstOrDefaultAsync();
 
         public new void Create(Usuario usuario)
