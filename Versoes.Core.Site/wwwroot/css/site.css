@@ -66,11 +66,11 @@
           margin-left: 7px;
       }
       
-      #tableSetores>tbody i {
+      tbody i {
           font-size: 22px;
       }
       
-      #tableSetores>tbody a {
+      a {
           text-decoration: none;
       }
       /* Sobreescrever borda verde e icone de campos válidos do boostrap padrão*/

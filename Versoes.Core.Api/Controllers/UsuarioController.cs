@@ -13,7 +13,7 @@ using Versoes.Core.Domain.ViewModels;
 namespace Versoes.Api.Controllers
 {
     [EnableCors("AllowSpecificOrigin")]
-    [Route("api/usuario")]
+    [Route("api/usuarios")]
     [ApiController]
     public class UsuarioController : ApiController
     {

@@ -14,7 +14,7 @@ using Versoes.Core.Domain.ViewModels;
 namespace Versoes.Api.Controllers
 {
     [EnableCors("AllowSpecificOrigin")]
-    [Route("api")]
+    [Route("api/projetos")]
     [Authorize]
     [ApiController]
     public class ProjetoController : ApiController
@@ -28,7 +28,7 @@ namespace Versoes.Api.Controllers
             _projetoService = projetoService;
         }
 
-        [HttpGet("projeto")]
+        [HttpGet]
         public async Task<IResult> Get()
         {
             try
@@ -48,7 +48,7 @@ namespace Versoes.Api.Controllers
             }
         }
 
-        [HttpGet("projeto/{id}")]
+        [HttpGet("{id}")]
         public async Task<IResult> Get(int id)
         {
             try
@@ -68,7 +68,7 @@ namespace Versoes.Api.Controllers
             }
         }
 
-        [HttpPost("projeto")]
+        [HttpPost]
         public async Task<IResult> Post([FromBody] ProjetoForCreationViewModel projetoForCreationViewModel)
         {
             try
@@ -88,7 +88,7 @@ namespace Versoes.Api.Controllers
             }
         }
 
-        [HttpPut("projeto")]
+        [HttpPut]
         public async Task<IResult> Put([FromBody] ProjetoForUpdateViewModel projetoForUpdateVireModel)
         {
             try
