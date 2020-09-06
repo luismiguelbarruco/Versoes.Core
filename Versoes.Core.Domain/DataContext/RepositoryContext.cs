@@ -69,7 +69,7 @@ namespace Versoes.Entities
             { 
                 Id = 1,
                 Login = "admin",
-                Senha = "admin123",
+                Senha = "jL0Xh/2fRnMB/2lfILO9MQ==", //admin123
                 Nome = "Administrador",
                 Sigla = "ADM",
                 SetorId = 5,

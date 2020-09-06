@@ -13,13 +13,13 @@ namespace Versoes.Core.Domain.Handlers
     {
         private readonly IMapper _mapper;
         private readonly IRepositoryWrapper _repository;
-        private readonly ICryptography _cryptography;
+        private readonly ICryptographyService _cryptographyService;
 
-        public UsuarioHandle(IMapper mapper, IRepositoryWrapper repository, ICryptography cryptography)
+        public UsuarioHandle(IMapper mapper, IRepositoryWrapper repository, ICryptographyService cryptographyService)
         {
             _mapper = mapper;
             _repository = repository;
-            _cryptography = cryptography;
+            _cryptographyService = cryptographyService;
         }
 
         public async Task<IResult> Handler(CadastrarUsuarioCommand command)
@@ -51,7 +51,7 @@ namespace Versoes.Core.Domain.Handlers
 
             var usuarioEntity = _mapper.Map<Usuario>(command);
 
-            var passwordEncrypted = _cryptography.Encrypt(usuarioEntity.Senha);
+            var passwordEncrypted = _cryptographyService.Encrypt(usuarioEntity.Senha);
 
             usuarioEntity.Senha = passwordEncrypted;
 
@@ -96,7 +96,7 @@ namespace Versoes.Core.Domain.Handlers
 
             var usuarioEntity = _mapper.Map<Usuario>(command);
 
-            var passwordEncrypted = _cryptography.Encrypt(usuarioEntity.Senha);
+            var passwordEncrypted = _cryptographyService.Encrypt(usuarioEntity.Senha);
 
             usuarioEntity.Senha = passwordEncrypted;
 

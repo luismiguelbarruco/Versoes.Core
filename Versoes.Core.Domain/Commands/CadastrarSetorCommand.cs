@@ -1,4 +1,3 @@
-using Versoes.Core.Domain.Commands.Validations;
 using Versoes.Entities;
 
 namespace Versoes.Core.Domain.Commands

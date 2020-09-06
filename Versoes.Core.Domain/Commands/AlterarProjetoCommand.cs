@@ -1,5 +1,4 @@
-﻿using Versoes.Core.Domain.Commands.Validations;
-using Versoes.Entities;
+﻿using Versoes.Entities;
 
 namespace Versoes.Core.Domain.Commands
 {
@@ -19,7 +18,7 @@ namespace Versoes.Core.Domain.Commands
 
             if (Invalid)
             {
-                ValidationResult = new CommandResult(false, "Não foi possivel cadastrar projeto", Notifications);
+                ValidationResult = new CommandResult(false, "Não foi possivel alterar os dados do projeto", Notifications);
                 return false;
             }
 

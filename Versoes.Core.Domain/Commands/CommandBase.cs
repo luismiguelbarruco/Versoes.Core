@@ -1,5 +1,4 @@
 using Flunt.Notifications;
-using System.Threading.Tasks;
 using Versoes.Core.Domain.ResultComunication;
 
 namespace Versoes.Core.Domain.Commands

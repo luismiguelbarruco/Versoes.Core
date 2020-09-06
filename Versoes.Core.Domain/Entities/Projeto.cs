@@ -1,4 +1,6 @@
-﻿namespace Versoes.Entities.Models
+﻿using Versoes.Core.Domain.Entities;
+
+namespace Versoes.Entities.Models
 {
     public class Projeto
     {
