@@ -44,17 +44,14 @@ namespace Versoes.Core.Domain.Repositories
 
         public async Task<Usuario> GetSetorByNameAndDiferentIdAsync(long id, string nome) =>
             await FindByCondition(u => u.Id != id && u.Nome.Equals(nome))
-                .AsNoTracking()
                 .FirstOrDefaultAsync();
 
         public async Task<Usuario> GetSetorByLoginAndDiferentIdAsync(long id, string login) =>
             await FindByCondition(u => u.Id != id && u.Login.Equals(login))
-                .AsNoTracking()
                 .FirstOrDefaultAsync();
 
         public async Task<Usuario> GetSetorBySiglaAndDiferentIdAsync(long id, string sigla) =>
             await FindByCondition(u => u.Id != id && u.Login.Equals(sigla))
-                .AsNoTracking()
                 .FirstOrDefaultAsync();
 
         public new void Create(Usuario usuario)

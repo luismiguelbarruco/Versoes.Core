@@ -18,7 +18,7 @@ namespace Versoes.Core.Domain.Commands
 
             if (Invalid)
             {
-                ValidationResult = new CommandResult(false, "Não foi possivel cadastrar setor", Notifications);
+                ValidationResult = new CommandResult(false, "Não foi possivel alterar os dados do setor", Notifications);
                 return false;
             }
 

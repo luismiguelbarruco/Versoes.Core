@@ -26,7 +26,7 @@ namespace Versoes.Core.Domain.Commands.Validations
 
             if (Invalid)
             {
-                ValidationResult = new CommandResult(false, "Não foi possivel alterar usuário", Notifications);
+                ValidationResult = new CommandResult(false, "Não foi possivel alterar os dados do usuário", Notifications);
                 return false;
             }
 
