@@ -7,9 +7,9 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 export const api = new URL("http://localhost:51580/api");
 
 axios.interceptors.request.use(async(config) => {
-    console.log('reuiqisição do axios' + config.url);
+    //console.log('reuiqisição do axios' + config.url);
     if (!config.url.endsWith('Login')) {
-        console.log('reuiqisição de login');
+        //  console.log('reuiqisição de login');
         const userToken = localStorage.getItem('token');
         config.headers.Authorization = `Bearer ${userToken}`;
     }

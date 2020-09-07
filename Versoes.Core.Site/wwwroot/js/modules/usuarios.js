@@ -10,12 +10,9 @@ export default function initUsuarios() {
     //Eventos
     modalModificaUsuario.querySelector('#formUsuario').addEventListener("submit", handleSubmit);
 
+
     //Chamada inicial da página de usuarios
     handleGetAllUsuarios();
-
-
-
-
 
 
     function handleSubmit(event) {
@@ -26,12 +23,17 @@ export default function initUsuarios() {
             const Nome = this.querySelector('#nome').value;
             const Id = +this.querySelector('#id').value;
             const Status = +this.querySelector('#status').value;
+            const Setor = +this.querySelector('#setor').value;
+            const Sigla = this.querySelector('#sigla').value;
+            const Login = this.querySelector('#login').value;
+            const Senha = this.querySelector('#senha').value;
+            console.log(Id, Nome, Sigla, Login, Senha, Status, Setor);
 
             // console.log(JSON.stringify({ Id, Nome, Status }));
             if (Id) {
-                handlePutUsuario({ Id, Nome, Status })
+                handlePutUsuario({ Id, Nome, Status, Setor: { id: Setor }, Sigla, Login, Senha })
             } else {
-                handlePostUsuario({ Nome, Status });
+                handlePostUsuario({ Nome, Status, Setor: { id: Setor }, Sigla, Login, Senha });
             }
         }
         this.classList.add('was-validated');
@@ -80,7 +82,8 @@ export default function initUsuarios() {
                 colunaStatus.innerHTML = "<span class='badge badge-pill badge-danger' style='font-size:90%; font-weight:500'>Excluído </span>";
 
             const colunaAcao = document.createElement('td');
-            colunaAcao.innerHTML = "<a href='#' data-toggle='modal' data-target='#modal-usuario' data-status='" + usuario.status + "' data-id='" + usuario.id + "' data-nome='" + usuario.nome + "'  class='edit mr-1'> <i class='far fa-edit text-primary' ></i>" +
+            colunaAcao.innerHTML = "<a href='#' data-toggle='modal' data-target='#modal-usuario' data-id='" + usuario.id + "' class='edit mr-1'> <i class='far fa-edit text-primary' ></i>" +
+
                 "<a href='#' data-toggle='modal' data-target='#modal-usuario-exclusao' data-status='" + usuario.status + "' data-id='" + usuario.id + "' data-nome='" + usuario.nome + "' > " +
                 "<i class='fas fa-trash-alt text-danger ' ></i></a>";
 
@@ -117,7 +120,7 @@ export default function initUsuarios() {
 
         } catch (err) {
             modalerro.fire({
-                text: 'Erro inesperado ao atualizar usuario'
+                text: 'Erro inesperado ao atualizar usuário'
             });
             console.error(err);
         }
@@ -144,7 +147,7 @@ export default function initUsuarios() {
 
         } catch (err) {
             modalerro.fire({
-                text: 'Erro inesperado ao cadastrar usuario'
+                text: 'Erro inesperado ao cadastrar usuário'
             });
             console.error(err);
         }
@@ -169,6 +172,34 @@ export default function initUsuarios() {
         } catch (error) {
             handleErrorApi(error);
         }
+    }
+
+    async function handleGetUsuario(Id) {
+        try {
+            await handleSelectSetores();
+
+            if (!Id)
+                return;
+
+            const response = await axios.get(apiUsuarios + '/' + Id);
+
+            if (response.data.success) {
+                const usuario = response.data.data;
+                modalModificaUsuario.querySelector('#login').value = usuario.login;
+                modalModificaUsuario.querySelector('input[name=id]').value = usuario.id;
+                modalModificaUsuario.querySelector('input[name=nome]').value = usuario.nome;
+                modalModificaUsuario.querySelector('select[name=status]').value = usuario.status;
+                modalModificaUsuario.querySelector('input[name=sigla]').value = usuario.sigla;
+                modalModificaUsuario.querySelector('select[name=setor]').value = usuario.setor.id;
+            } else {
+                modalerro.fire({
+                    text: response.data.message
+                });
+            }
+        } catch (error) {
+            handleErrorApi(error);
+        }
+
     }
 
     function handleErrorApi(error) {
@@ -207,23 +238,34 @@ export default function initUsuarios() {
     $('#modal-usuario').on('show.bs.modal', function(event) {
         handleModalStyleByOperation(event.relatedTarget, this, 'usuário');
         const id = +event.relatedTarget.dataset.id;
-        const nome = event.relatedTarget.dataset.nome;
-        const status = +event.relatedTarget.dataset.status;
-
-        if (!isNaN(id)) {
-            this.querySelector('input[name=id]').value = id;
-            this.querySelector('input[name=nome]').value = nome;
-            this.querySelector('select[name=status]').value = status;
-        }
-
-
-
+        console.log(id);
+        handleGetUsuario(id);
 
     });
 
+    async function handleSelectSetores() {
+        const selectSetor = modalModificaUsuario.querySelector('#setor');
+        try {
+            const response = await axios.get(api + '/setores');
+            if (response.data.success) {
+
+                response.data.data.forEach((setor) => {
+                    selectSetor.appendChild(new Option(setor.nome, setor.id));
+                });
+
+            } else {
+                modalerro.fire({
+                    text: response.data.message
+                });
+            }
+        } catch (error) {
+            handleErrorApi(error);
+        }
+    }
+
     //gambiarra para ter foco no primeiro campo do modal, ver depois outra forma de fazer
     $('#modal-usuario').on('shown.bs.modal', function() {
-        $('#Nome').trigger('focus');
+        $('#nome').trigger('focus');
     });
 
     /*Evento acionado ao fechar modal*/

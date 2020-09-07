@@ -206,7 +206,7 @@ export default function initProjetos() {
 
     //gambiarra para ter foco no primeiro campo do modal, ver depois outra forma de fazer
     $('#modal-projeto').on('shown.bs.modal', function() {
-        $('#Nome').trigger('focus');
+        $('#nome').trigger('focus');
     });
 
     /*Evento acionado ao fechar modal*/
