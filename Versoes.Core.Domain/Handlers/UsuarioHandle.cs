@@ -53,6 +53,7 @@ namespace Versoes.Core.Domain.Handlers
 
             var passwordEncrypted = _cryptographyService.Encrypt(usuarioEntity.Senha);
 
+            usuarioEntity.Setor = setor;
             usuarioEntity.Senha = passwordEncrypted;
 
             _repository.Usuario.Create(usuarioEntity);
@@ -98,6 +99,7 @@ namespace Versoes.Core.Domain.Handlers
 
             var passwordEncrypted = _cryptographyService.Encrypt(usuarioEntity.Senha);
 
+            usuarioEntity.Setor = setor;
             usuarioEntity.Senha = passwordEncrypted;
 
             _repository.Usuario.Update(usuarioEntity);
