@@ -97,10 +97,20 @@ namespace Versoes.Core.Domain.Handlers
 
             var usuarioEntity = _mapper.Map<Usuario>(command);
 
-            var passwordEncrypted = _cryptographyService.Encrypt(usuarioEntity.Senha);
-
             usuarioEntity.Setor = setor;
-            usuarioEntity.Senha = passwordEncrypted;
+
+            if (string.IsNullOrWhiteSpace(command.Senha))
+            {
+                usuario = await _repository.Usuario.GetUsuarioByIdAsync(command.Id);
+
+                usuarioEntity.Senha = usuario.Senha;
+            }
+            else
+            {
+                var passwordEncrypted = _cryptographyService.Encrypt(usuarioEntity.Senha);
+
+                usuarioEntity.Senha = passwordEncrypted;
+            }
 
             _repository.Usuario.Update(usuarioEntity);
 

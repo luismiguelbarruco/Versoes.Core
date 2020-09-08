@@ -9,7 +9,7 @@
             ValidateSigla();
             ValidateSetor();
             ValidateLogin();
-            ValidateSenha();
+            ValidateNovaSenha();
         }
     }
 }

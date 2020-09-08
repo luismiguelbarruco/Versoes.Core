@@ -48,15 +48,22 @@ namespace Versoes.Core.Domain.Commands
         {
             AddNotifications(new Contract()
                 .IsNotNullOrEmpty(Login, nameof(Login), "Login é obrigatório")
-                .HasMaxLen(Nome, 20, nameof(Login), "Login não pode ser maior que 20 caracteres.")
+                .HasMaxLengthIfNotNullOrEmpty(Nome, 20, nameof(Login), "Login não pode ser maior que 20 caracteres.")
+            );
+        }
+
+        protected void ValidateNovaSenha()
+        {
+            AddNotifications(new Contract()
+                .IsNotNullOrEmpty(Senha, nameof(Senha), "Senha é obrigatório")
+                .HasMaxLengthIfNotNullOrEmpty(Senha, 8, nameof(Senha), "Senha não pode ser maior que 8 caracteres.")
             );
         }
 
         protected void ValidateSenha()
         {
             AddNotifications(new Contract()
-                .IsNotNullOrEmpty(Senha, nameof(Senha), "Senha é obrigatório")
-                .HasMaxLen(Senha, 20, nameof(Senha), "Senha não pode ser maior que 20 caracteres.")
+                .HasMaxLengthIfNotNullOrEmpty(Senha, 8, nameof(Senha), "Senha não pode ser maior que 8 caracteres.")
             );
         }
     }

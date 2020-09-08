@@ -20,7 +20,7 @@ namespace Versoes.Core.Domain.Commands
             ValidateNome();
             ValidateSetor();
             ValidateLogin();
-            ValidateSenha();
+            ValidateNovaSenha();
 
             if (Invalid)
             {

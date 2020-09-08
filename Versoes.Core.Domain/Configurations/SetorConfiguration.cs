@@ -8,13 +8,13 @@ namespace Versoes.Entities.Configurations
     {
         public void Configure(EntityTypeBuilder<Setor> builder)
         {
-            builder.ToTable("Setor");
+            builder.ToTable("Setores");
 
             builder.HasKey(setor => setor.Id);
             builder.HasIndex(setor => setor.Nome).IsUnique();
 
             builder.Property(setor => setor.Id).ValueGeneratedOnAdd();
-            builder.Property(setor => setor.Nome).HasMaxLength(100).IsRequired();
+            builder.Property(setor => setor.Nome).HasMaxLength(30).IsRequired();
             builder.Property(setor => setor.Status).IsRequired();
         }
     }
