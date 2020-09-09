@@ -66,15 +66,15 @@ body {
     </style>
 </head>
 <body class="text-center">
-  <form class="form-signin js-login" novalidate id="formSingIn">
+  <form class="form-signin js-login" novalidate id="formSingIn" autocomplete="off">
       <span class="mb-4"><i class="fas fa-bug  text-bluemenu fa-7x" ></i></span>
       <h1 class="h3 mt-2 py-3 font-weight-normal text-mcm">Área restrita Versões.Core</h1>
       <label for="Login" class="sr-only">Login:</label>
-      <input type="text" id="Login" class="form-control" placeholder="Digite seu login" required autofocus="">
-      <div class="invalid-feedback">Digite seu login</div>
+      <input type="text" id="Login" class="form-control" maxlength="20" placeholder="Digite seu login" required autofocus="">
+      <div class="invalid-feedback">Digite seu login.</div>
       <label for="Senha" class="sr-only">Senha:</label>
-      <input type="password" id="Senha" class="form-control" placeholder="Digite sua senha"  required>
-      <div class="invalid-feedback">Digite sua senha</div>
+      <input type="password" id="Senha" class="form-control" placeholder="Digite sua senha" maxlength="8" required>
+      <div class="invalid-feedback">Digite sua senha.</div>
  
      <button class="btn btn-lg btn-success btn-block" type="submit">Entrar <i class="ml-1 fas fa-sign-in-alt"></i></button>
       <p class="mt-5 mb-3 text-muted">  &copy; 2020 - Versões.Core</p>

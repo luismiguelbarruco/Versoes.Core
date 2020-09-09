@@ -2,6 +2,7 @@ import initSetores from "./modules/setores.js";
 import initProjetos from "./modules/projetos.js";
 import initLogin from "./modules/login.js";
 import initUsuarios from "./modules/usuarios.js";
+import { modalerro } from './modules/modal-helper.js';
 
 const setorSection = document.querySelector('#js-setor');
 const usuarioSection = document.querySelector('#js-usuario');
@@ -10,6 +11,17 @@ const loginSection = document.querySelector('.js-login');
 const logoutUsernamespan = document.querySelector('.js-logout-username');
 const linkLogout = document.querySelector('#linkLogout');
 
+if (!localStorage.getItem('login') && !loginSection) {
+    console.log('entrei');
+    modalerro.fire({
+        title: "Não autorizado",
+        text: 'Usuário não está autenticado para este recurso.',
+        onClose: () => {
+            document.location.href = '/Usuario/Login';
+        }
+    });
+
+}
 
 if (usuarioSection)
     initUsuarios();

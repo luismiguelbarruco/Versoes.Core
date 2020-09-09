@@ -40,24 +40,24 @@
                         <div class="row">
                             <div class="form-group col-12">
                                 <label for="nome">Nome:</label>
-                                <input type="text" name="nome" id="nome" placeholder="Digite o nome" class="form-control" required maxlength="30" minlength="3" >
+                                <input type="text" name="nome" id="nome" placeholder="Digite o nome" class="form-control" required maxlength="60" minlength="3" >
                                 <input type="hidden" name="id" id="id">
-                                <div class="invalid-feedback">Digite um nome válido.</div>
+                                <div class="invalid-feedback">Digite um nome de 3 até 60 caracteres. (Apenas letras) </div>
                             </div>
                             <div class="form-group col-12">
                                 <label for="sigla">Sigla:</label>
                                 <input type="text" name="sigla" id="sigla" placeholder="Digite sua sigla" class="form-control" required maxlength="5" minlength="2" >
-                                <div class="invalid-feedback">Digite uma sigla válida.</div>
+                                <div class="invalid-feedback">Digite uma sigla de 2 até 5 caracteres.(Apenas letras e números)</div>
                             </div>
                              <div class="form-group col-12">
                                 <label for="login">Login:</label>
-                                <input type="text" name="loginUsuario" id="login" placeholder="Digite seu login" class="form-control" required maxlength="20" minlength="2" >
-                                <div class="invalid-feedback">Digite um login válido.</div>
+                                <input type="text" name="loginUsuario" id="login" placeholder="Digite seu login" class="form-control" required maxlength="20" minlength="3" >
+                                <div class="invalid-feedback">Digite um login de 3 até 20 caracteres. (Apenas letras e números).</div>
                             </div>
                              <div class="form-group col-12">
                                 <label for="sigla">Senha:</label>
-                                <input type="password" name="senha" id="senha" placeholder="Digite sua senha" class="form-control" required maxlength="8" minlength="3" >
-                                <div class="invalid-feedback">Digite uma senha válida.</div>
+                                <input type="password" name="senha" id="senha" placeholder="Digite sua senha" class="form-control"  maxlength="8" minlength="3" >
+                                <div class="invalid-feedback">Digite uma senha de 3 até 8 caracteres.</div>
                             </div>
                             <div class="form-group col-12">
                                 <label for="setor">Setor:</label>
