@@ -1,0 +1,4283 @@
+{
+  "Versoes.Core.Domain.dll": {
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\DataContext\\RepositoryContext.cs": {
+      "Versoes.Entities.RepositoryContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<Versoes.Entities.Models.Setor> Versoes.Entities.RepositoryContext::get_Setores()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Versoes.Entities.Models.Usuario> Versoes.Entities.RepositoryContext::get_Usuarios()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Versoes.Entities.Models.Projeto> Versoes.Entities.RepositoryContext::get_Projetos()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Entities.RepositoryContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Entities.RepositoryContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<Versoes.Entities.RepositoryContext>)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "19": 0
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 16,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Versoes.Entities.RepositoryContextFactory": {
+        "Versoes.Entities.RepositoryContext Versoes.Entities.RepositoryContextFactory::CreateDbContext(System.String[])": {
+          "Lines": {
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "90": 0,
+            "92": 0,
+            "94": 0,
+            "96": 0,
+            "97": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Entities\\Bug.cs": {
+      "Versoes.Entities.Models.Bug": {
+        "Versoes.Entities.Models.Criticidade Versoes.Entities.Models.Bug::get_Criticidade()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.StatusDoBug Versoes.Entities.Models.Bug::get_Status()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Entities\\Cliente.cs": {
+      "Versoes.Entities.Models.Cliente": {
+        "System.Int64 Versoes.Entities.Models.Cliente::get_Id()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Entities.Models.Cliente::get_NomeFantasia()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Entities.Models.Cliente::get_RazaoSocial()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Entities\\Lancamento.cs": {
+      "Versoes.Entities.Models.Lancamento": {
+        "System.Int64 Versoes.Entities.Models.Lancamento::get_Id()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Entities.Models.Lancamento::get_Descricao()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Entities.Models.Projeto> Versoes.Entities.Models.Lancamento::get_Projetos()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Entities.Models.Cliente> Versoes.Entities.Models.Lancamento::get_Clientes()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Versoes.Entities.Models.Lancamento::get_DataCriacao()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Versoes.Entities.Models.Lancamento::get_UltimaAlteracao()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.Usuario Versoes.Entities.Models.Lancamento::get_CriadoPor()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.Usuario Versoes.Entities.Models.Lancamento::get_PendentePara()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.Entities.Anotacao> Versoes.Entities.Models.Lancamento::get_Anotacoes()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Entities.Models.Lancamento::get_Teste()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Entities\\Projeto.cs": {
+      "Versoes.Entities.Models.Projeto": {
+        "System.Int64 Versoes.Entities.Models.Projeto::get_Id()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Entities.Models.Projeto::get_Nome()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.StatusDeCadastro Versoes.Entities.Models.Projeto::get_Status()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Entities\\Requisito.cs": {
+      "Versoes.Entities.Models.Requisito": {
+        "System.String Versoes.Entities.Models.Requisito::get_Motivacao()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.UInt16 Versoes.Entities.Models.Requisito::get_ValorAgregado()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.Prioridade Versoes.Entities.Models.Requisito::get_Prioridade()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.StatusDoRequisito Versoes.Entities.Models.Requisito::get_Status()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Entities\\Setor.cs": {
+      "Versoes.Entities.Models.Setor": {
+        "System.Int32 Versoes.Entities.Models.Setor::get_Id()": {
+          "Lines": {
+            "6": 56
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Entities.Models.Setor::get_Nome()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.StatusDeCadastro Versoes.Entities.Models.Setor::get_Status()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Entities\\Usuario.cs": {
+      "Versoes.Entities.Models.Usuario": {
+        "System.Int32 Versoes.Entities.Models.Usuario::get_Id()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Entities.Models.Usuario::get_Nome()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.StatusDeCadastro Versoes.Entities.Models.Usuario::get_Status()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Entities.Models.Usuario::get_Sigla()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Entities.Models.Usuario::get_Login()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Entities.Models.Usuario::get_Senha()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Versoes.Entities.Models.Usuario::get_SetorId()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.Setor Versoes.Entities.Models.Usuario::get_Setor()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Configurations\\ProjetoConfiguration.cs": {
+      "Versoes.Entities.Configurations.ProjetoConfiguration": {
+        "System.Void Versoes.Entities.Configurations.ProjetoConfiguration::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<Versoes.Entities.Models.Projeto>)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "13": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Configurations\\SetorConfiguration.cs": {
+      "Versoes.Entities.Configurations.SetorConfiguration": {
+        "System.Void Versoes.Entities.Configurations.SetorConfiguration::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<Versoes.Entities.Models.Setor>)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "13": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Configurations\\UsuarioConfiguration.cs": {
+      "Versoes.Entities.Configurations.UsuarioConfiguration": {
+        "System.Void Versoes.Entities.Configurations.UsuarioConfiguration::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<Versoes.Entities.Models.Usuario>)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\BugForCreationViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.BugForCreationViewModel": {
+        "System.String Versoes.Core.Domain.ViewModels.BugForCreationViewModel::get_Descricao()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.ProjetoViewModel> Versoes.Core.Domain.ViewModels.BugForCreationViewModel::get_Projetos()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.ClienteViewModel> Versoes.Core.Domain.ViewModels.BugForCreationViewModel::get_Clientes()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Core.Domain.ViewModels.UsuarioViewModel Versoes.Core.Domain.ViewModels.BugForCreationViewModel::get_CriadoPor()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Core.Domain.ViewModels.UsuarioViewModel Versoes.Core.Domain.ViewModels.BugForCreationViewModel::get_PendentePara()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.AnotacaoVireModel> Versoes.Core.Domain.ViewModels.BugForCreationViewModel::get_Anotacoes()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.Criticidade Versoes.Core.Domain.ViewModels.BugForCreationViewModel::get_Criticidade()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\BugForUpdateViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.BugForUpdateViewModel": {
+        "System.String Versoes.Core.Domain.ViewModels.BugForUpdateViewModel::get_Descricao()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.ProjetoViewModel> Versoes.Core.Domain.ViewModels.BugForUpdateViewModel::get_Projetos()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.ClienteViewModel> Versoes.Core.Domain.ViewModels.BugForUpdateViewModel::get_Clientes()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Core.Domain.ViewModels.UsuarioViewModel Versoes.Core.Domain.ViewModels.BugForUpdateViewModel::get_CriadoPor()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Core.Domain.ViewModels.UsuarioViewModel Versoes.Core.Domain.ViewModels.BugForUpdateViewModel::get_PendentePara()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.AnotacaoVireModel> Versoes.Core.Domain.ViewModels.BugForUpdateViewModel::get_Anotacoes()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.Criticidade Versoes.Core.Domain.ViewModels.BugForUpdateViewModel::get_Criticidade()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.StatusDoBug Versoes.Core.Domain.ViewModels.BugForUpdateViewModel::get_Status()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\BugVViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.BugVireModel": {
+        "System.Int64 Versoes.Core.Domain.ViewModels.BugVireModel::get_Id()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ViewModels.BugVireModel::get_Descricao()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.ProjetoViewModel> Versoes.Core.Domain.ViewModels.BugVireModel::get_Projetos()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.ClienteViewModel> Versoes.Core.Domain.ViewModels.BugVireModel::get_Clientes()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Versoes.Core.Domain.ViewModels.BugVireModel::get_DataCriacao()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Versoes.Core.Domain.ViewModels.BugVireModel::get_UltimaAlteracao()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Core.Domain.ViewModels.UsuarioViewModel Versoes.Core.Domain.ViewModels.BugVireModel::get_CriadoPor()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Core.Domain.ViewModels.UsuarioViewModel Versoes.Core.Domain.ViewModels.BugVireModel::get_PendentePara()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.AnotacaoVireModel> Versoes.Core.Domain.ViewModels.BugVireModel::get_Anotacoes()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.Criticidade Versoes.Core.Domain.ViewModels.BugVireModel::get_Criticidade()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.StatusDoBug Versoes.Core.Domain.ViewModels.BugVireModel::get_Status()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\ClienteViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.ClienteViewModel": {
+        "System.Int64 Versoes.Core.Domain.ViewModels.ClienteViewModel::get_Id()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ViewModels.ClienteViewModel::get_NomeFantasia()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ViewModels.ClienteViewModel::get_RazaoSocial()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\LoginViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.LoginViewModel": {
+        "System.String Versoes.Core.Domain.ViewModels.LoginViewModel::get_Login()": {
+          "Lines": {
+            "9": 5
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ViewModels.LoginViewModel::get_Senha()": {
+          "Lines": {
+            "10": 5
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<Flunt.Notifications.Notification> Versoes.Core.Domain.ViewModels.LoginViewModel::get_Notifications()": {
+          "Lines": {
+            "11": 4
+          },
+          "Branches": []
+        },
+        "System.Boolean Versoes.Core.Domain.ViewModels.LoginViewModel::Validate()": {
+          "Lines": {
+            "14": 2,
+            "15": 2,
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "23": 0,
+            "24": 2
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 17,
+              "Offset": 16,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\ProjetoForCreationViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.ProjetoForCreationViewModel": {
+        "System.Collections.Generic.IReadOnlyCollection`1<Flunt.Notifications.Notification> Versoes.Core.Domain.ViewModels.ProjetoForCreationViewModel::get_Notifications()": {
+          "Lines": {
+            "9": 6
+          },
+          "Branches": []
+        },
+        "System.Boolean Versoes.Core.Domain.ViewModels.ProjetoForCreationViewModel::Validate()": {
+          "Lines": {
+            "12": 3,
+            "13": 3,
+            "15": 3,
+            "16": 3,
+            "17": 3,
+            "18": 3,
+            "21": 0,
+            "22": 3
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 15,
+              "Offset": 16,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\ProjetoForUpdateViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.ProjetoForUpdateViewModel": {
+        "System.Collections.Generic.IReadOnlyCollection`1<Flunt.Notifications.Notification> Versoes.Core.Domain.ViewModels.ProjetoForUpdateViewModel::get_Notifications()": {
+          "Lines": {
+            "9": 8
+          },
+          "Branches": []
+        },
+        "System.Boolean Versoes.Core.Domain.ViewModels.ProjetoForUpdateViewModel::Validate()": {
+          "Lines": {
+            "12": 4,
+            "13": 4,
+            "15": 4,
+            "16": 4,
+            "17": 4,
+            "18": 4,
+            "21": 0,
+            "22": 4
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 15,
+              "Offset": 16,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\ProjetoViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.ProjetoViewModel": {
+        "System.Int32 Versoes.Core.Domain.ViewModels.ProjetoViewModel::get_Id()": {
+          "Lines": {
+            "7": 12
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ViewModels.ProjetoViewModel::get_Nome()": {
+          "Lines": {
+            "8": 41
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.StatusDeCadastro Versoes.Core.Domain.ViewModels.ProjetoViewModel::get_Status()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\RequisitoForCreationViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.RequisitoForCreationVireModel": {
+        "System.String Versoes.Core.Domain.ViewModels.RequisitoForCreationVireModel::get_Descricao()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.ProjetoViewModel> Versoes.Core.Domain.ViewModels.RequisitoForCreationVireModel::get_Projetos()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.ClienteViewModel> Versoes.Core.Domain.ViewModels.RequisitoForCreationVireModel::get_Clientes()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Core.Domain.ViewModels.UsuarioViewModel Versoes.Core.Domain.ViewModels.RequisitoForCreationVireModel::get_CriadoPor()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Core.Domain.ViewModels.UsuarioViewModel Versoes.Core.Domain.ViewModels.RequisitoForCreationVireModel::get_PendentePara()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.AnotacaoVireModel> Versoes.Core.Domain.ViewModels.RequisitoForCreationVireModel::get_Anotacoes()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ViewModels.RequisitoForCreationVireModel::get_Motivacao()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.UInt16 Versoes.Core.Domain.ViewModels.RequisitoForCreationVireModel::get_ValorAgregado()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.Prioridade Versoes.Core.Domain.ViewModels.RequisitoForCreationVireModel::get_Prioridade()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.StatusDoRequisito Versoes.Core.Domain.ViewModels.RequisitoForCreationVireModel::get_Status()": {
+          "Lines": {
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\RequisitoForUpdateViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.RequisitoForUpdateViewModel": {
+        "System.String Versoes.Core.Domain.ViewModels.RequisitoForUpdateViewModel::get_Descricao()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.ProjetoViewModel> Versoes.Core.Domain.ViewModels.RequisitoForUpdateViewModel::get_Projetos()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.ClienteViewModel> Versoes.Core.Domain.ViewModels.RequisitoForUpdateViewModel::get_Clientes()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Core.Domain.ViewModels.UsuarioViewModel Versoes.Core.Domain.ViewModels.RequisitoForUpdateViewModel::get_CriadoPor()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Core.Domain.ViewModels.UsuarioViewModel Versoes.Core.Domain.ViewModels.RequisitoForUpdateViewModel::get_PendentePara()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.AnotacaoVireModel> Versoes.Core.Domain.ViewModels.RequisitoForUpdateViewModel::get_Anotacoes()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ViewModels.RequisitoForUpdateViewModel::get_Motivacao()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.UInt16 Versoes.Core.Domain.ViewModels.RequisitoForUpdateViewModel::get_ValorAgregado()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.Prioridade Versoes.Core.Domain.ViewModels.RequisitoForUpdateViewModel::get_Prioridade()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.StatusDoRequisito Versoes.Core.Domain.ViewModels.RequisitoForUpdateViewModel::get_Status()": {
+          "Lines": {
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\RequisitoViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.RequisitoViewModel": {
+        "System.Int64 Versoes.Core.Domain.ViewModels.RequisitoViewModel::get_Id()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ViewModels.RequisitoViewModel::get_Descricao()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.ProjetoViewModel> Versoes.Core.Domain.ViewModels.RequisitoViewModel::get_Projetos()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.ClienteViewModel> Versoes.Core.Domain.ViewModels.RequisitoViewModel::get_Clientes()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Versoes.Core.Domain.ViewModels.RequisitoViewModel::get_DataCriacao()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Versoes.Core.Domain.ViewModels.RequisitoViewModel::get_UltimaAlteracao()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Core.Domain.ViewModels.UsuarioViewModel Versoes.Core.Domain.ViewModels.RequisitoViewModel::get_CriadoPor()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Core.Domain.ViewModels.UsuarioViewModel Versoes.Core.Domain.ViewModels.RequisitoViewModel::get_PendentePara()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Core.Domain.ViewModels.AnotacaoVireModel> Versoes.Core.Domain.ViewModels.RequisitoViewModel::get_Anotacoes()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ViewModels.RequisitoViewModel::get_Motivacao()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.UInt16 Versoes.Core.Domain.ViewModels.RequisitoViewModel::get_ValorAgregado()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.Prioridade Versoes.Core.Domain.ViewModels.RequisitoViewModel::get_Prioridade()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.StatusDoRequisito Versoes.Core.Domain.ViewModels.RequisitoViewModel::get_Status()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\SetorForCreationViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.SetorForCreationViewModel": {
+        "System.Collections.Generic.IReadOnlyCollection`1<Flunt.Notifications.Notification> Versoes.Core.Domain.ViewModels.SetorForCreationViewModel::get_Notifications()": {
+          "Lines": {
+            "9": 6
+          },
+          "Branches": []
+        },
+        "System.Boolean Versoes.Core.Domain.ViewModels.SetorForCreationViewModel::Validate()": {
+          "Lines": {
+            "12": 3,
+            "13": 3,
+            "15": 3,
+            "16": 3,
+            "17": 3,
+            "18": 3,
+            "21": 0,
+            "22": 3
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 15,
+              "Offset": 16,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\SetorForUpdateViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.SetorForUpdateViewModel": {
+        "System.Collections.Generic.IReadOnlyCollection`1<Flunt.Notifications.Notification> Versoes.Core.Domain.ViewModels.SetorForUpdateViewModel::get_Notifications()": {
+          "Lines": {
+            "9": 8
+          },
+          "Branches": []
+        },
+        "System.Boolean Versoes.Core.Domain.ViewModels.SetorForUpdateViewModel::Validate()": {
+          "Lines": {
+            "12": 4,
+            "13": 4,
+            "15": 4,
+            "16": 4,
+            "17": 4,
+            "18": 4,
+            "21": 0,
+            "22": 4
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 15,
+              "Offset": 16,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\SetorViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.SetorViewModel": {
+        "System.Int32 Versoes.Core.Domain.ViewModels.SetorViewModel::get_Id()": {
+          "Lines": {
+            "7": 9
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ViewModels.SetorViewModel::get_Nome()": {
+          "Lines": {
+            "8": 41
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.StatusDeCadastro Versoes.Core.Domain.ViewModels.SetorViewModel::get_Status()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Versoes.Core.Domain.ViewModels.SetorViewModel::get_TotalUsuariosPorSetor()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\UsuarioAutenticadoViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.UsuarioAutenticadoViewModel": {
+        "System.String Versoes.Core.Domain.ViewModels.UsuarioAutenticadoViewModel::get_Token()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Core.Domain.ViewModels.UsuarioViewModel Versoes.Core.Domain.ViewModels.UsuarioAutenticadoViewModel::get_UsuarioViewModel()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\UsuarioForCreationViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.UsuarioForCreationViewModel": {
+        "System.Collections.Generic.IReadOnlyCollection`1<Flunt.Notifications.Notification> Versoes.Core.Domain.ViewModels.UsuarioForCreationViewModel::get_Notifications()": {
+          "Lines": {
+            "9": 28
+          },
+          "Branches": []
+        },
+        "System.Boolean Versoes.Core.Domain.ViewModels.UsuarioForCreationViewModel::Validate()": {
+          "Lines": {
+            "12": 14,
+            "13": 14,
+            "15": 14,
+            "16": 14,
+            "17": 14,
+            "18": 14,
+            "21": 0,
+            "22": 14
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 14
+            },
+            {
+              "Line": 15,
+              "Offset": 16,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\UsuarioForUpdateViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.UsuarioForUpdateViewModel": {
+        "System.Collections.Generic.IReadOnlyCollection`1<Flunt.Notifications.Notification> Versoes.Core.Domain.ViewModels.UsuarioForUpdateViewModel::get_Notifications()": {
+          "Lines": {
+            "9": 28
+          },
+          "Branches": []
+        },
+        "System.Boolean Versoes.Core.Domain.ViewModels.UsuarioForUpdateViewModel::Validate()": {
+          "Lines": {
+            "12": 14,
+            "13": 14,
+            "15": 14,
+            "16": 14,
+            "17": 14,
+            "18": 14,
+            "21": 0,
+            "22": 14
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 14
+            },
+            {
+              "Line": 15,
+              "Offset": 16,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\UsuarioViewModel.cs": {
+      "Versoes.Core.Domain.ViewModels.UsuarioViewModel": {
+        "System.Int32 Versoes.Core.Domain.ViewModels.UsuarioViewModel::get_Id()": {
+          "Lines": {
+            "8": 43
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ViewModels.UsuarioViewModel::get_Nome()": {
+          "Lines": {
+            "9": 118
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ViewModels.UsuarioViewModel::get_Sigla()": {
+          "Lines": {
+            "10": 118
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.Setor Versoes.Core.Domain.ViewModels.UsuarioViewModel::get_Setor()": {
+          "Lines": {
+            "11": 88
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.StatusDeCadastro Versoes.Core.Domain.ViewModels.UsuarioViewModel::get_Status()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ViewModels.UsuarioViewModel::get_Login()": {
+          "Lines": {
+            "13": 118
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ViewModels.UsuarioViewModel::get_Senha()": {
+          "Lines": {
+            "14": 103
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\ViewModelBase.cs": {
+      "Versoes.Core.Domain.ViewModels.ViewModelBase": {
+        "System.Collections.Generic.IReadOnlyCollection`1<Flunt.Notifications.Notification> Versoes.Core.Domain.ViewModels.ViewModelBase::get_Notifications()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\Validations\\AlterarProjetoValidation.cs": {
+      "Versoes.Core.Domain.ViewModels.Validations.AlterarProjetoValidation": {
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.AlterarProjetoValidation::.ctor(Versoes.Core.Domain.ViewModels.ProjetoForUpdateViewModel)": {
+          "Lines": {
+            "7": 4,
+            "8": 4,
+            "9": 4,
+            "10": 4,
+            "11": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\Validations\\AlterarSetorValidation.cs": {
+      "Versoes.Core.Domain.ViewModels.Validations.AlterarSetorValidation": {
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.AlterarSetorValidation::.ctor(Versoes.Core.Domain.ViewModels.SetorForUpdateViewModel)": {
+          "Lines": {
+            "6": 4,
+            "7": 4,
+            "8": 4,
+            "9": 4,
+            "10": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\Validations\\AlterarUsuarioValidation.cs": {
+      "Versoes.Core.Domain.ViewModels.Validations.AlterarUsuarioValidation": {
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.AlterarUsuarioValidation::.ctor(Versoes.Core.Domain.ViewModels.UsuarioForUpdateViewModel)": {
+          "Lines": {
+            "6": 14,
+            "7": 14,
+            "8": 14,
+            "9": 14,
+            "10": 14,
+            "11": 14,
+            "12": 14,
+            "13": 14,
+            "14": 14
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\Validations\\CadastrarProjetoValidation.cs": {
+      "Versoes.Core.Domain.ViewModels.Validations.CadastrarProjetoValidation": {
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.CadastrarProjetoValidation::.ctor(Versoes.Core.Domain.ViewModels.ProjetoForCreationViewModel)": {
+          "Lines": {
+            "7": 3,
+            "8": 3,
+            "9": 3,
+            "10": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\Validations\\CadastrarSetorValidation.cs": {
+      "Versoes.Core.Domain.ViewModels.Validations.CadastrarSetorValidation": {
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.CadastrarSetorValidation::.ctor(Versoes.Core.Domain.ViewModels.SetorForCreationViewModel)": {
+          "Lines": {
+            "7": 3,
+            "8": 3,
+            "9": 3,
+            "10": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\Validations\\CadastrarUsuarioValidation.cs": {
+      "Versoes.Core.Domain.ViewModels.Validations.CadastrarUsuarioValidation": {
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.CadastrarUsuarioValidation::.ctor(Versoes.Core.Domain.ViewModels.UsuarioForCreationViewModel)": {
+          "Lines": {
+            "6": 14,
+            "7": 14,
+            "8": 14,
+            "9": 14,
+            "10": 14,
+            "11": 14,
+            "12": 14,
+            "13": 14
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\Validations\\LoginValidation.cs": {
+      "Versoes.Core.Domain.ViewModels.Validations.LoginValidation": {
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.LoginValidation::ValidateLogin()": {
+          "Lines": {
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 2
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.LoginValidation::ValidateSenha()": {
+          "Lines": {
+            "25": 2,
+            "26": 2,
+            "27": 2,
+            "28": 2,
+            "29": 2
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.LoginValidation::.ctor(Versoes.Core.Domain.ViewModels.LoginViewModel)": {
+          "Lines": {
+            "10": 2,
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2,
+            "15": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\Validations\\ProjetoValidation.cs": {
+      "Versoes.Core.Domain.ViewModels.Validations.ProjetoValidation`1": {
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.ProjetoValidation`1::ValidateId()": {
+          "Lines": {
+            "13": 4,
+            "14": 4,
+            "15": 4,
+            "16": 4,
+            "17": 4
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.ProjetoValidation`1::ValidateNome()": {
+          "Lines": {
+            "20": 7,
+            "21": 7,
+            "22": 7,
+            "23": 7,
+            "24": 7,
+            "25": 7,
+            "26": 7
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.ProjetoValidation`1::.ctor(TViewModel)": {
+          "Lines": {
+            "10": 14
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\Validations\\SetorValidation.cs": {
+      "Versoes.Core.Domain.ViewModels.Validations.SetorValidation`1": {
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.SetorValidation`1::ValidateId()": {
+          "Lines": {
+            "13": 4,
+            "14": 4,
+            "15": 4,
+            "16": 4,
+            "17": 4
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.SetorValidation`1::ValidateNome()": {
+          "Lines": {
+            "20": 7,
+            "21": 7,
+            "22": 7,
+            "23": 7,
+            "24": 7,
+            "25": 7,
+            "26": 7
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.SetorValidation`1::.ctor(TViewModel)": {
+          "Lines": {
+            "10": 14
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ViewModels\\Validations\\UsuarioValidation.cs": {
+      "Versoes.Core.Domain.ViewModels.Validations.UsuarioValidation`1": {
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.UsuarioValidation`1::ValidateId()": {
+          "Lines": {
+            "13": 14,
+            "14": 14,
+            "15": 14,
+            "16": 14,
+            "17": 14
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.UsuarioValidation`1::ValidateNome()": {
+          "Lines": {
+            "20": 28,
+            "21": 28,
+            "22": 28,
+            "23": 28,
+            "24": 28,
+            "25": 28,
+            "26": 28
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.UsuarioValidation`1::ValidateSigla()": {
+          "Lines": {
+            "29": 28,
+            "30": 28,
+            "31": 28,
+            "32": 28,
+            "33": 28,
+            "34": 28,
+            "35": 28
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.UsuarioValidation`1::ValidateSetor()": {
+          "Lines": {
+            "38": 28,
+            "39": 28,
+            "40": 28,
+            "41": 28,
+            "42": 28
+          },
+          "Branches": []
+        },
+        "Flunt.Notifications.Notifiable Versoes.Core.Domain.ViewModels.Validations.UsuarioValidation`1::SetorContract()": {
+          "Lines": {
+            "45": 28,
+            "46": 28,
+            "47": 2,
+            "48": 2,
+            "50": 26,
+            "51": 26,
+            "52": 28
+          },
+          "Branches": [
+            {
+              "Line": 46,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 46,
+              "Offset": 22,
+              "EndOffset": 63,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 26
+            }
+          ]
+        },
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.UsuarioValidation`1::ValidateLogin()": {
+          "Lines": {
+            "55": 28,
+            "56": 28,
+            "57": 28,
+            "58": 28,
+            "59": 28,
+            "60": 28,
+            "61": 28
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.UsuarioValidation`1::ValidateNovaSenha()": {
+          "Lines": {
+            "64": 14,
+            "65": 14,
+            "66": 14,
+            "67": 14,
+            "68": 14,
+            "69": 14
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.UsuarioValidation`1::ValidateSenha()": {
+          "Lines": {
+            "72": 14,
+            "73": 14,
+            "74": 14,
+            "75": 14,
+            "76": 14
+          },
+          "Branches": []
+        },
+        "Flunt.Notifications.Notifiable Versoes.Core.Domain.ViewModels.Validations.UsuarioValidation`1::SenhaContract()": {
+          "Lines": {
+            "79": 28,
+            "80": 28,
+            "81": 28,
+            "82": 28,
+            "83": 28
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ViewModels.Validations.UsuarioValidation`1::.ctor(TViewModel)": {
+          "Lines": {
+            "10": 56
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Services\\CipherCryptography.cs": {
+      "Versoes.Core.Domain.Services.CipherCryptography": {
+        "System.String Versoes.Core.Domain.Services.CipherCryptography::Encrypt(System.String)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.Services.CipherCryptography::Decrypt(System.String)": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Services\\JwtTokenService.cs": {
+      "Versoes.Core.Domain.Services.JwtTokenService": {
+        "System.String Versoes.Core.Domain.Services.JwtTokenService::GenerateToken(Versoes.Entities.Models.Usuario)": {
+          "Lines": {
+            "18": 0,
+            "20": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Services.JwtTokenService::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Services\\ProjetoService.cs": {
+      "Versoes.Core.Domain.Services.ProjetoService": {
+        "System.Void Versoes.Core.Domain.Services.ProjetoService::Dispose()": {
+          "Lines": {
+            "66": 0,
+            "67": 0,
+            "68": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Services.ProjetoService::.ctor(AutoMapper.IMapper,Versoes.Core.Domain.Repositories.IRepositoryWrapper)": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Services.ProjetoService/<GetAllProjetosAsync>d__3": {
+        "System.Void Versoes.Core.Domain.Services.ProjetoService/<GetAllProjetosAsync>d__3::MoveNext()": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Services.ProjetoService/<GetAllProjetoByIdAsync>d__4": {
+        "System.Void Versoes.Core.Domain.Services.ProjetoService/<GetAllProjetoByIdAsync>d__4::MoveNext()": {
+          "Lines": {
+            "35": 0,
+            "36": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Services.ProjetoService/<InserirAsync>d__5": {
+        "System.Void Versoes.Core.Domain.Services.ProjetoService/<InserirAsync>d__5::MoveNext()": {
+          "Lines": {
+            "44": 0,
+            "45": 0,
+            "47": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Services.ProjetoService/<AtualizarAsync>d__6": {
+        "System.Void Versoes.Core.Domain.Services.ProjetoService/<AtualizarAsync>d__6::MoveNext()": {
+          "Lines": {
+            "55": 0,
+            "56": 0,
+            "58": 0,
+            "60": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Services\\ServiceResult.cs": {
+      "Versoes.Core.Domain.Services.ServiceResult": {
+        "System.Void Versoes.Core.Domain.Services.ServiceResult::.ctor()": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Services.ServiceResult::.ctor(System.Boolean,System.String)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Services.ServiceResult::.ctor(System.Boolean,System.String,System.Collections.Generic.IReadOnlyCollection`1<Flunt.Notifications.Notification>)": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Services\\SetorSerive.cs": {
+      "Versoes.Core.Domain.Services.SetorSerive": {
+        "System.Void Versoes.Core.Domain.Services.SetorSerive::Dispose()": {
+          "Lines": {
+            "78": 0,
+            "79": 0,
+            "80": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Services.SetorSerive::<GetAllSetoresAsync>b__3_0(Versoes.Core.Domain.ViewModels.SetorViewModel)": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Services.SetorSerive::.ctor(AutoMapper.IMapper,Versoes.Core.Domain.Repositories.IRepositoryWrapper)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Services.SetorSerive/<GetAllSetoresAsync>d__3": {
+        "System.Void Versoes.Core.Domain.Services.SetorSerive/<GetAllSetoresAsync>d__3::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "32": 0,
+            "35": 0,
+            "39": 0,
+            "40": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Services.SetorSerive/<GetSetorByIdAsync>d__4": {
+        "System.Void Versoes.Core.Domain.Services.SetorSerive/<GetSetorByIdAsync>d__4::MoveNext()": {
+          "Lines": {
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "48": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Services.SetorSerive/<InserirAsync>d__5": {
+        "System.Void Versoes.Core.Domain.Services.SetorSerive/<InserirAsync>d__5::MoveNext()": {
+          "Lines": {
+            "56": 0,
+            "57": 0,
+            "59": 0,
+            "61": 0,
+            "63": 0,
+            "64": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Services.SetorSerive/<AtualizarAsync>d__6": {
+        "System.Void Versoes.Core.Domain.Services.SetorSerive/<AtualizarAsync>d__6::MoveNext()": {
+          "Lines": {
+            "67": 0,
+            "68": 0,
+            "70": 0,
+            "72": 0,
+            "74": 0,
+            "75": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Services\\UsuarioService.cs": {
+      "Versoes.Core.Domain.Services.UsuarioService": {
+        "System.String Versoes.Core.Domain.Services.UsuarioService::GenerateToken(Versoes.Entities.Models.Usuario)": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Core.Domain.ViewModels.UsuarioAutenticadoViewModel Versoes.Core.Domain.Services.UsuarioService::CreateUsuarioAutenticado(System.String,Versoes.Entities.Models.Usuario)": {
+          "Lines": {
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "47": 0,
+            "48": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Services.UsuarioService::Dispose()": {
+          "Lines": {
+            "100": 0,
+            "101": 0,
+            "102": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Services.UsuarioService::.ctor(AutoMapper.IMapper,Versoes.Core.Domain.Repositories.IRepositoryWrapper,Versoes.Core.Domain.Services.ITokenService,Versoes.Core.Domain.Services.ICryptographyService)": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Services.UsuarioService/<GetAllUsuaruiosAsync>d__7": {
+        "System.Void Versoes.Core.Domain.Services.UsuarioService/<GetAllUsuaruiosAsync>d__7::MoveNext()": {
+          "Lines": {
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "56": 0,
+            "57": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Services.UsuarioService/<GetUsuarioByIdAsync>d__8": {
+        "System.Void Versoes.Core.Domain.Services.UsuarioService/<GetUsuarioByIdAsync>d__8::MoveNext()": {
+          "Lines": {
+            "60": 0,
+            "61": 0,
+            "63": 0,
+            "65": 0,
+            "66": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Services.UsuarioService/<GetUsuarioAsync>d__9": {
+        "System.Void Versoes.Core.Domain.Services.UsuarioService/<GetUsuarioAsync>d__9::MoveNext()": {
+          "Lines": {
+            "69": 0,
+            "70": 0,
+            "72": 0,
+            "74": 0,
+            "75": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Services.UsuarioService/<InserirAsync>d__10": {
+        "System.Void Versoes.Core.Domain.Services.UsuarioService/<InserirAsync>d__10::MoveNext()": {
+          "Lines": {
+            "78": 0,
+            "79": 0,
+            "81": 0,
+            "83": 0,
+            "85": 0,
+            "86": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Services.UsuarioService/<AtualizarAsync>d__11": {
+        "System.Void Versoes.Core.Domain.Services.UsuarioService/<AtualizarAsync>d__11::MoveNext()": {
+          "Lines": {
+            "89": 0,
+            "90": 0,
+            "92": 0,
+            "94": 0,
+            "96": 0,
+            "97": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\ResultComunication\\ResultBase.cs": {
+      "Versoes.Core.Domain.ResultComunication.ResultBase": {
+        "System.Boolean Versoes.Core.Domain.ResultComunication.ResultBase::get_Success()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.ResultComunication.ResultBase::get_Message()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Object Versoes.Core.Domain.ResultComunication.ResultBase::get_Data()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ResultComunication.ResultBase::.ctor()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ResultComunication.ResultBase::.ctor(System.String)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ResultComunication.ResultBase::.ctor(System.Boolean,System.Object)": {
+          "Lines": {
+            "20": 40,
+            "21": 40,
+            "22": 40,
+            "23": 40,
+            "24": 40
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ResultComunication.ResultBase::.ctor(System.Boolean,System.String)": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.ResultComunication.ResultBase::.ctor(System.Boolean,System.String,System.Collections.Generic.IReadOnlyCollection`1<Flunt.Notifications.Notification>)": {
+          "Lines": {
+            "33": 40,
+            "34": 40,
+            "35": 40,
+            "36": 40,
+            "37": 40
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Repositories\\BugRepository.cs": {
+      "Versoes.Core.Domain.Repositories.BugRepository": {
+        "System.Void Versoes.Core.Domain.Repositories.BugRepository::.ctor(Versoes.Entities.RepositoryContext)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.BugRepository/<GetAllBugsAsync>d__1": {
+        "System.Void Versoes.Core.Domain.Repositories.BugRepository/<GetAllBugsAsync>d__1::MoveNext()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.BugRepository/<GetBugByIdAsync>d__2": {
+        "System.Void Versoes.Core.Domain.Repositories.BugRepository/<GetBugByIdAsync>d__2::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.BugRepository/<GetBugWithDetailsAsync>d__3": {
+        "System.Void Versoes.Core.Domain.Repositories.BugRepository/<GetBugWithDetailsAsync>d__3::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Repositories\\ProjetoRepository.cs": {
+      "Versoes.Core.Domain.Repositories.ProjetoRepository": {
+        "System.Void Versoes.Core.Domain.Repositories.ProjetoRepository::.ctor(Versoes.Entities.RepositoryContext)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.ProjetoRepository/<GetAllProjetosAsync>d__1": {
+        "System.Void Versoes.Core.Domain.Repositories.ProjetoRepository/<GetAllProjetosAsync>d__1::MoveNext()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.ProjetoRepository/<GetProjetoByIdAsync>d__2": {
+        "System.Void Versoes.Core.Domain.Repositories.ProjetoRepository/<GetProjetoByIdAsync>d__2::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.ProjetoRepository/<GetProjetoByNameAsync>d__3": {
+        "System.Void Versoes.Core.Domain.Repositories.ProjetoRepository/<GetProjetoByNameAsync>d__3::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.ProjetoRepository/<GetProjetoByNameAndDiferentIdAsync>d__4": {
+        "System.Void Versoes.Core.Domain.Repositories.ProjetoRepository/<GetProjetoByNameAndDiferentIdAsync>d__4::MoveNext()": {
+          "Lines": {
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Repositories\\RepositoryBase.cs": {
+      "Versoes.Core.Domain.Repositories.RepositoryBase`1": {
+        "Versoes.Entities.RepositoryContext Versoes.Core.Domain.Repositories.RepositoryBase`1::get_RepositoryContext()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Repositories.RepositoryBase`1::Create(T)": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Repositories.RepositoryBase`1::Delete(T)": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Linq.IQueryable`1<T> Versoes.Core.Domain.Repositories.RepositoryBase`1::FindAll()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Linq.IQueryable`1<T> Versoes.Core.Domain.Repositories.RepositoryBase`1::FindByCondition(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Boolean>>)": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Repositories.RepositoryBase`1::Update(T)": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Repositories.RepositoryBase`1::.ctor(Versoes.Entities.RepositoryContext)": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Repositories\\RepositoryWrapper.cs": {
+      "Versoes.Core.Domain.Repositories.RepositoryWrapper": {
+        "Versoes.Core.Domain.Repositories.ISetorRepository Versoes.Core.Domain.Repositories.RepositoryWrapper::get_Setor()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 7,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "Versoes.Core.Domain.Repositories.IUsuarioRepository Versoes.Core.Domain.Repositories.RepositoryWrapper::get_Usuario()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 7,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "Versoes.Core.Domain.Repositories.IProjetoRepository Versoes.Core.Domain.Repositories.RepositoryWrapper::get_Projeto()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 7,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "Versoes.Core.Domain.Repositories.IRequisitoRepository Versoes.Core.Domain.Repositories.RepositoryWrapper::get_Requisito()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 18,
+              "Offset": 7,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "Versoes.Core.Domain.Repositories.IBugRepository Versoes.Core.Domain.Repositories.RepositoryWrapper::get_Bug()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 7,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Versoes.Core.Domain.Repositories.RepositoryWrapper::.ctor(Versoes.Entities.RepositoryContext)": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.RepositoryWrapper/<SaveAsync>d__17": {
+        "System.Void Versoes.Core.Domain.Repositories.RepositoryWrapper/<SaveAsync>d__17::MoveNext()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Repositories\\RequisitoRepository.cs": {
+      "Versoes.Core.Domain.Repositories.RequisitoRepository": {
+        "System.Void Versoes.Core.Domain.Repositories.RequisitoRepository::.ctor(Versoes.Entities.RepositoryContext)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.RequisitoRepository/<GetAllRequisitosAsync>d__1": {
+        "System.Void Versoes.Core.Domain.Repositories.RequisitoRepository/<GetAllRequisitosAsync>d__1::MoveNext()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.RequisitoRepository/<GetRequisitoByIdAsync>d__2": {
+        "System.Void Versoes.Core.Domain.Repositories.RequisitoRepository/<GetRequisitoByIdAsync>d__2::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.RequisitoRepository/<GetRequisitoWithDetailsAsync>d__3": {
+        "System.Void Versoes.Core.Domain.Repositories.RequisitoRepository/<GetRequisitoWithDetailsAsync>d__3::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Repositories\\SetorRepository.cs": {
+      "Versoes.Core.Domain.Repositories.SetorRepository": {
+        "System.Void Versoes.Core.Domain.Repositories.SetorRepository::.ctor(Versoes.Entities.RepositoryContext)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.SetorRepository/<GetAllSetoresAsync>d__1": {
+        "System.Void Versoes.Core.Domain.Repositories.SetorRepository/<GetAllSetoresAsync>d__1::MoveNext()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.SetorRepository/<GetSetorByIdAsync>d__2": {
+        "System.Void Versoes.Core.Domain.Repositories.SetorRepository/<GetSetorByIdAsync>d__2::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.SetorRepository/<GetSetorByNameAsync>d__3": {
+        "System.Void Versoes.Core.Domain.Repositories.SetorRepository/<GetSetorByNameAsync>d__3::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.SetorRepository/<GetSetorByNameAndDiferentIdAsync>d__4": {
+        "System.Void Versoes.Core.Domain.Repositories.SetorRepository/<GetSetorByNameAndDiferentIdAsync>d__4::MoveNext()": {
+          "Lines": {
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Repositories\\UsuarioRepository.cs": {
+      "Versoes.Core.Domain.Repositories.UsuarioRepository": {
+        "System.Void Versoes.Core.Domain.Repositories.UsuarioRepository::Create(Versoes.Entities.Models.Usuario)": {
+          "Lines": {
+            "58": 0,
+            "59": 0,
+            "61": 0,
+            "62": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Repositories.UsuarioRepository::.ctor(Versoes.Entities.RepositoryContext)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.UsuarioRepository/<GetAllUsuariosAsync>d__1": {
+        "System.Void Versoes.Core.Domain.Repositories.UsuarioRepository/<GetAllUsuariosAsync>d__1::MoveNext()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.UsuarioRepository/<GetUsuarioByIdAsync>d__2": {
+        "System.Void Versoes.Core.Domain.Repositories.UsuarioRepository/<GetUsuarioByIdAsync>d__2::MoveNext()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.UsuarioRepository/<GetUsuarioByNomeAsync>d__3": {
+        "System.Void Versoes.Core.Domain.Repositories.UsuarioRepository/<GetUsuarioByNomeAsync>d__3::MoveNext()": {
+          "Lines": {
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.UsuarioRepository/<GetUsuarioBySiglaAsync>d__4": {
+        "System.Void Versoes.Core.Domain.Repositories.UsuarioRepository/<GetUsuarioBySiglaAsync>d__4::MoveNext()": {
+          "Lines": {
+            "33": 0,
+            "34": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.UsuarioRepository/<GetUsuarioByLoginAsync>d__5": {
+        "System.Void Versoes.Core.Domain.Repositories.UsuarioRepository/<GetUsuarioByLoginAsync>d__5::MoveNext()": {
+          "Lines": {
+            "37": 0,
+            "38": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.UsuarioRepository/<GetUsuarioAsync>d__6": {
+        "System.Void Versoes.Core.Domain.Repositories.UsuarioRepository/<GetUsuarioAsync>d__6::MoveNext()": {
+          "Lines": {
+            "41": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.UsuarioRepository/<GetSetorByNameAndDiferentIdAsync>d__7": {
+        "System.Void Versoes.Core.Domain.Repositories.UsuarioRepository/<GetSetorByNameAndDiferentIdAsync>d__7::MoveNext()": {
+          "Lines": {
+            "46": 0,
+            "47": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.UsuarioRepository/<GetSetorByLoginAndDiferentIdAsync>d__8": {
+        "System.Void Versoes.Core.Domain.Repositories.UsuarioRepository/<GetSetorByLoginAndDiferentIdAsync>d__8::MoveNext()": {
+          "Lines": {
+            "50": 0,
+            "51": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Repositories.UsuarioRepository/<GetSetorBySiglaAndDiferentIdAsync>d__9": {
+        "System.Void Versoes.Core.Domain.Repositories.UsuarioRepository/<GetSetorBySiglaAndDiferentIdAsync>d__9::MoveNext()": {
+          "Lines": {
+            "54": 0,
+            "55": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Migrations\\20200830194157_InitialCreate.cs": {
+      "Versoes.Core.Domain.Migrations.InitialCreate": {
+        "System.Void Versoes.Core.Domain.Migrations.InitialCreate::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Migrations.InitialCreate::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "120": 0,
+            "121": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Migrations\\20200830194157_InitialCreate.Designer.cs": {
+      "Versoes.Core.Domain.Migrations.InitialCreate": {
+        "System.Void Versoes.Core.Domain.Migrations.InitialCreate::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "16": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "171": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Migrations\\20200901230544_AlterarTanhanhoDoCampoSenhaDoUsuario.cs": {
+      "Versoes.Core.Domain.Migrations.AlterarTanhanhoDoCampoSenhaDoUsuario": {
+        "System.Void Versoes.Core.Domain.Migrations.AlterarTanhanhoDoCampoSenhaDoUsuario::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Migrations.AlterarTanhanhoDoCampoSenhaDoUsuario::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Migrations\\20200901230544_AlterarTanhanhoDoCampoSenhaDoUsuario.Designer.cs": {
+      "Versoes.Core.Domain.Migrations.AlterarTanhanhoDoCampoSenhaDoUsuario": {
+        "System.Void Versoes.Core.Domain.Migrations.AlterarTanhanhoDoCampoSenhaDoUsuario::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "16": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "171": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Migrations\\RepositoryContextModelSnapshot.cs": {
+      "Versoes.Core.Domain.Migrations.RepositoryContextModelSnapshot": {
+        "System.Void Versoes.Core.Domain.Migrations.RepositoryContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "169": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Handlers\\ProjetoHandler.cs": {
+      "Versoes.Core.Domain.Handlers.ProjetoHandler": {
+        "System.Void Versoes.Core.Domain.Handlers.ProjetoHandler::.ctor(AutoMapper.IMapper,Versoes.Core.Domain.Repositories.IRepositoryWrapper)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Handlers.ProjetoHandler/<Handler>d__3": {
+        "System.Void Versoes.Core.Domain.Handlers.ProjetoHandler/<Handler>d__3::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "36": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 57,
+              "EndOffset": 59,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 57,
+              "EndOffset": 76,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 236,
+              "EndOffset": 238,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 236,
+              "EndOffset": 266,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Versoes.Core.Domain.Handlers.ProjetoHandler/<Handler>d__4": {
+        "System.Void Versoes.Core.Domain.Handlers.ProjetoHandler/<Handler>d__4::MoveNext()": {
+          "Lines": {
+            "44": 0,
+            "45": 0,
+            "47": 0,
+            "48": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "55": 0,
+            "57": 0,
+            "58": 0,
+            "60": 0,
+            "62": 0,
+            "64": 0,
+            "66": 0,
+            "67": 0
+          },
+          "Branches": [
+            {
+              "Line": 47,
+              "Offset": 71,
+              "EndOffset": 73,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 71,
+              "EndOffset": 90,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 52,
+              "Offset": 251,
+              "EndOffset": 253,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 52,
+              "Offset": 251,
+              "EndOffset": 281,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 456,
+              "EndOffset": 458,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 456,
+              "EndOffset": 486,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Handlers\\SetorHandler.cs": {
+      "Versoes.Core.Domain.Handlers.SetorHandler": {
+        "System.Void Versoes.Core.Domain.Handlers.SetorHandler::.ctor(AutoMapper.IMapper,Versoes.Core.Domain.Repositories.IRepositoryWrapper)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Handlers.SetorHandler/<Handler>d__3": {
+        "System.Void Versoes.Core.Domain.Handlers.SetorHandler/<Handler>d__3::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "36": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 57,
+              "EndOffset": 59,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 57,
+              "EndOffset": 76,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 236,
+              "EndOffset": 238,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 236,
+              "EndOffset": 266,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Versoes.Core.Domain.Handlers.SetorHandler/<Handler>d__4": {
+        "System.Void Versoes.Core.Domain.Handlers.SetorHandler/<Handler>d__4::MoveNext()": {
+          "Lines": {
+            "44": 0,
+            "45": 0,
+            "47": 0,
+            "48": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "55": 0,
+            "57": 0,
+            "58": 0,
+            "60": 0,
+            "62": 0,
+            "64": 0,
+            "66": 0,
+            "67": 0
+          },
+          "Branches": [
+            {
+              "Line": 47,
+              "Offset": 71,
+              "EndOffset": 73,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 71,
+              "EndOffset": 90,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 52,
+              "Offset": 251,
+              "EndOffset": 253,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 52,
+              "Offset": 251,
+              "EndOffset": 281,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 456,
+              "EndOffset": 458,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 456,
+              "EndOffset": 486,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Handlers\\UsuarioHandle.cs": {
+      "Versoes.Core.Domain.Handlers.UsuarioHandle": {
+        "System.Void Versoes.Core.Domain.Handlers.UsuarioHandle::.ctor(AutoMapper.IMapper,Versoes.Core.Domain.Repositories.IRepositoryWrapper,Versoes.Core.Domain.Services.ICryptographyService)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      },
+      "Versoes.Core.Domain.Handlers.UsuarioHandle/<Handler>d__4": {
+        "System.Void Versoes.Core.Domain.Handlers.UsuarioHandle/<Handler>d__4::MoveNext()": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "53": 0,
+            "55": 0,
+            "56": 0,
+            "58": 0,
+            "60": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 89,
+              "EndOffset": 91,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 89,
+              "EndOffset": 108,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 268,
+              "EndOffset": 270,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 268,
+              "EndOffset": 298,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 461,
+              "EndOffset": 463,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 461,
+              "EndOffset": 491,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 654,
+              "EndOffset": 656,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 654,
+              "EndOffset": 684,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 848,
+              "EndOffset": 850,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 848,
+              "EndOffset": 878,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Versoes.Core.Domain.Handlers.UsuarioHandle/<Handler>d__5": {
+        "System.Void Versoes.Core.Domain.Handlers.UsuarioHandle/<Handler>d__5::MoveNext()": {
+          "Lines": {
+            "66": 0,
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "72": 0,
+            "74": 0,
+            "75": 0,
+            "77": 0,
+            "79": 0,
+            "80": 0,
+            "82": 0,
+            "84": 0,
+            "85": 0,
+            "87": 0,
+            "89": 0,
+            "90": 0,
+            "92": 0,
+            "94": 0,
+            "95": 0,
+            "97": 0,
+            "99": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "105": 0,
+            "106": 0,
+            "108": 0,
+            "109": 0,
+            "111": 0,
+            "112": 0,
+            "114": 0,
+            "116": 0,
+            "118": 0,
+            "119": 0
+          },
+          "Branches": [
+            {
+              "Line": 69,
+              "Offset": 107,
+              "EndOffset": 109,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 69,
+              "Offset": 107,
+              "EndOffset": 126,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 74,
+              "Offset": 287,
+              "EndOffset": 289,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 74,
+              "Offset": 287,
+              "EndOffset": 317,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 79,
+              "Offset": 492,
+              "EndOffset": 494,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 79,
+              "Offset": 492,
+              "EndOffset": 522,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 84,
+              "Offset": 697,
+              "EndOffset": 699,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 84,
+              "Offset": 697,
+              "EndOffset": 727,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 89,
+              "Offset": 902,
+              "EndOffset": 904,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 89,
+              "Offset": 902,
+              "EndOffset": 932,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 94,
+              "Offset": 1096,
+              "EndOffset": 1098,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 94,
+              "Offset": 1096,
+              "EndOffset": 1126,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 101,
+              "Offset": 1192,
+              "EndOffset": 1197,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 101,
+              "Offset": 1192,
+              "EndOffset": 1375,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Entities\\Anotacao.cs": {
+      "Versoes.Core.Domain.Entities.Anotacao": {
+        "System.Int64 Versoes.Core.Domain.Entities.Anotacao::get_Id()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.Usuario Versoes.Core.Domain.Entities.Anotacao::get_Usuario()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Versoes.Core.Domain.Entities.Anotacao::get_Data()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.Models.StatusDaAnotacao Versoes.Core.Domain.Entities.Anotacao::get_Status()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.Entities.Anotacao::get_Conteudo()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Versoes.Entities.Models.Lancamento> Versoes.Core.Domain.Entities.Anotacao::get_Lancamentos()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Commands\\AlterarProjetoCommand.cs": {
+      "Versoes.Core.Domain.Commands.AlterarProjetoCommand": {
+        "System.Boolean Versoes.Core.Domain.Commands.AlterarProjetoCommand::Validate()": {
+          "Lines": {
+            "15": 4,
+            "16": 4,
+            "17": 4,
+            "19": 4,
+            "20": 4,
+            "21": 4,
+            "22": 4,
+            "25": 0,
+            "26": 4
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 19,
+              "Offset": 23,
+              "EndOffset": 54,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Versoes.Core.Domain.Commands.AlterarProjetoCommand::.ctor(System.Int32,System.String,Versoes.Entities.StatusDeCadastro)": {
+          "Lines": {
+            "7": 4,
+            "8": 4,
+            "9": 4,
+            "10": 4,
+            "11": 4,
+            "12": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Commands\\AlterarSetorCommand.cs": {
+      "Versoes.Core.Domain.Commands.AlterarSetorCommand": {
+        "System.Boolean Versoes.Core.Domain.Commands.AlterarSetorCommand::Validate()": {
+          "Lines": {
+            "15": 4,
+            "16": 4,
+            "17": 4,
+            "19": 4,
+            "20": 4,
+            "21": 4,
+            "22": 4,
+            "25": 0,
+            "26": 4
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 19,
+              "Offset": 23,
+              "EndOffset": 54,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Versoes.Core.Domain.Commands.AlterarSetorCommand::.ctor(System.Int32,System.String,Versoes.Entities.StatusDeCadastro)": {
+          "Lines": {
+            "7": 4,
+            "8": 4,
+            "9": 4,
+            "10": 4,
+            "11": 4,
+            "12": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Commands\\AlterarUsuarioCommand.cs": {
+      "Versoes.Core.Domain.Commands.AlterarUsuarioCommand": {
+        "System.Boolean Versoes.Core.Domain.Commands.AlterarUsuarioCommand::Validate()": {
+          "Lines": {
+            "19": 13,
+            "20": 13,
+            "21": 13,
+            "22": 13,
+            "23": 13,
+            "24": 13,
+            "25": 13,
+            "27": 13,
+            "28": 13,
+            "29": 13,
+            "30": 13,
+            "33": 0,
+            "34": 13
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 51,
+              "EndOffset": 53,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 13
+            },
+            {
+              "Line": 27,
+              "Offset": 51,
+              "EndOffset": 82,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Versoes.Core.Domain.Commands.AlterarUsuarioCommand::.ctor(System.Int32,System.String,System.String,System.Int32,Versoes.Entities.StatusDeCadastro,System.String,System.String)": {
+          "Lines": {
+            "7": 13,
+            "8": 13,
+            "9": 13,
+            "10": 13,
+            "11": 13,
+            "12": 13,
+            "13": 13,
+            "14": 13,
+            "15": 13,
+            "16": 13
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Commands\\CadastrarProjetoCommand.cs": {
+      "Versoes.Core.Domain.Commands.CadastrarProjetoCommand": {
+        "System.Boolean Versoes.Core.Domain.Commands.CadastrarProjetoCommand::Validate()": {
+          "Lines": {
+            "14": 3,
+            "15": 3,
+            "17": 3,
+            "18": 3,
+            "19": 3,
+            "20": 3,
+            "23": 0,
+            "24": 3
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 17,
+              "Offset": 16,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Versoes.Core.Domain.Commands.CadastrarProjetoCommand::.ctor(System.String,Versoes.Entities.StatusDeCadastro)": {
+          "Lines": {
+            "7": 3,
+            "8": 3,
+            "9": 3,
+            "10": 3,
+            "11": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Commands\\CadastrarSetorCommand.cs": {
+      "Versoes.Core.Domain.Commands.CadastrarSetorCommand": {
+        "System.Boolean Versoes.Core.Domain.Commands.CadastrarSetorCommand::Validate()": {
+          "Lines": {
+            "14": 3,
+            "15": 3,
+            "17": 3,
+            "18": 3,
+            "19": 3,
+            "20": 3,
+            "23": 0,
+            "24": 3
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 17,
+              "Offset": 16,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Versoes.Core.Domain.Commands.CadastrarSetorCommand::.ctor(System.String,Versoes.Entities.StatusDeCadastro)": {
+          "Lines": {
+            "7": 3,
+            "8": 3,
+            "9": 3,
+            "10": 3,
+            "11": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Commands\\CadastrarUsuarioCommand.cs": {
+      "Versoes.Core.Domain.Commands.CadastrarUsuarioCommand": {
+        "System.Boolean Versoes.Core.Domain.Commands.CadastrarUsuarioCommand::Validate()": {
+          "Lines": {
+            "18": 13,
+            "19": 13,
+            "20": 13,
+            "21": 13,
+            "22": 13,
+            "23": 13,
+            "25": 13,
+            "26": 13,
+            "27": 13,
+            "28": 13,
+            "31": 0,
+            "32": 13
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 44,
+              "EndOffset": 46,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 13
+            },
+            {
+              "Line": 25,
+              "Offset": 44,
+              "EndOffset": 75,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Versoes.Core.Domain.Commands.CadastrarUsuarioCommand::.ctor(System.String,System.String,System.Int32,Versoes.Entities.StatusDeCadastro,System.String,System.String)": {
+          "Lines": {
+            "7": 13,
+            "8": 13,
+            "9": 13,
+            "10": 13,
+            "11": 13,
+            "12": 13,
+            "13": 13,
+            "14": 13,
+            "15": 13
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Commands\\CommandBase.cs": {
+      "Versoes.Core.Domain.Commands.CommandBase": {
+        "Versoes.Core.Domain.ResultComunication.IResult Versoes.Core.Domain.Commands.CommandBase::get_ValidationResult()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Commands\\CommandResult.cs": {
+      "Versoes.Core.Domain.Commands.CommandResult": {
+        "System.Void Versoes.Core.Domain.Commands.CommandResult::.ctor()": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Commands.CommandResult::.ctor(System.String)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Commands.CommandResult::.ctor(System.Boolean,System.String)": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Commands.CommandResult::.ctor(System.Boolean,System.String,System.Collections.Generic.IReadOnlyCollection`1<Flunt.Notifications.Notification>)": {
+          "Lines": {
+            "24": 40,
+            "25": 40,
+            "26": 40
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Commands\\ProjetoCommand.cs": {
+      "Versoes.Core.Domain.Commands.ProjetoCommand": {
+        "System.Int32 Versoes.Core.Domain.Commands.ProjetoCommand::get_Id()": {
+          "Lines": {
+            "8": 8
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.Commands.ProjetoCommand::get_Nome()": {
+          "Lines": {
+            "9": 28
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.StatusDeCadastro Versoes.Core.Domain.Commands.ProjetoCommand::get_Status()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Commands.ProjetoCommand::ValidateId()": {
+          "Lines": {
+            "13": 4,
+            "14": 4,
+            "15": 4,
+            "16": 4,
+            "17": 4
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Commands.ProjetoCommand::ValidateNome()": {
+          "Lines": {
+            "20": 7,
+            "21": 7,
+            "22": 7,
+            "23": 7,
+            "24": 7,
+            "25": 7,
+            "26": 7
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Commands\\SetorCommand.cs": {
+      "Versoes.Core.Domain.Commands.SetorCommand": {
+        "System.Int32 Versoes.Core.Domain.Commands.SetorCommand::get_Id()": {
+          "Lines": {
+            "8": 8
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.Commands.SetorCommand::get_Nome()": {
+          "Lines": {
+            "9": 28
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.StatusDeCadastro Versoes.Core.Domain.Commands.SetorCommand::get_Status()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Commands.SetorCommand::ValidateId()": {
+          "Lines": {
+            "13": 4,
+            "14": 4,
+            "15": 4,
+            "16": 4,
+            "17": 4
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Commands.SetorCommand::ValidateNome()": {
+          "Lines": {
+            "20": 7,
+            "21": 7,
+            "22": 7,
+            "23": 7,
+            "24": 7,
+            "25": 7,
+            "26": 7
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\Commands\\UsuarioCommand.cs": {
+      "Versoes.Core.Domain.Commands.UsuarioCommand": {
+        "System.Int32 Versoes.Core.Domain.Commands.UsuarioCommand::get_Id()": {
+          "Lines": {
+            "9": 26
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.Commands.UsuarioCommand::get_Nome()": {
+          "Lines": {
+            "10": 104
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.Commands.UsuarioCommand::get_Sigla()": {
+          "Lines": {
+            "11": 104
+          },
+          "Branches": []
+        },
+        "System.Int32 Versoes.Core.Domain.Commands.UsuarioCommand::get_SetorId()": {
+          "Lines": {
+            "12": 52
+          },
+          "Branches": []
+        },
+        "Versoes.Entities.StatusDeCadastro Versoes.Core.Domain.Commands.UsuarioCommand::get_Status()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.Commands.UsuarioCommand::get_Login()": {
+          "Lines": {
+            "14": 104
+          },
+          "Branches": []
+        },
+        "System.String Versoes.Core.Domain.Commands.UsuarioCommand::get_Senha()": {
+          "Lines": {
+            "15": 91
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Commands.UsuarioCommand::ValidateId()": {
+          "Lines": {
+            "18": 13,
+            "19": 13,
+            "20": 13,
+            "21": 13,
+            "22": 13
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Commands.UsuarioCommand::ValidateSigla()": {
+          "Lines": {
+            "25": 26,
+            "26": 26,
+            "27": 26,
+            "28": 26,
+            "29": 26,
+            "30": 26,
+            "31": 26
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Commands.UsuarioCommand::ValidateNome()": {
+          "Lines": {
+            "34": 26,
+            "35": 26,
+            "36": 26,
+            "37": 26,
+            "38": 26,
+            "39": 26,
+            "40": 26
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Commands.UsuarioCommand::ValidateSetor()": {
+          "Lines": {
+            "43": 26,
+            "44": 26,
+            "45": 26,
+            "46": 26,
+            "47": 26
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Commands.UsuarioCommand::ValidateLogin()": {
+          "Lines": {
+            "50": 26,
+            "51": 26,
+            "52": 26,
+            "53": 26,
+            "54": 26,
+            "55": 26,
+            "56": 26
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Commands.UsuarioCommand::ValidateNovaSenha()": {
+          "Lines": {
+            "59": 13,
+            "60": 13,
+            "61": 13,
+            "62": 13,
+            "63": 13,
+            "64": 13
+          },
+          "Branches": []
+        },
+        "System.Void Versoes.Core.Domain.Commands.UsuarioCommand::ValidateSenha()": {
+          "Lines": {
+            "67": 13,
+            "68": 13,
+            "69": 13,
+            "70": 13,
+            "71": 13
+          },
+          "Branches": []
+        },
+        "Flunt.Notifications.Notifiable Versoes.Core.Domain.Commands.UsuarioCommand::SenhaContract()": {
+          "Lines": {
+            "74": 26,
+            "75": 26,
+            "76": 26,
+            "77": 26,
+            "78": 26
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\AutoMapper\\CommandToModel.cs": {
+      "Versoes.Core.Domain.AutoMapper.CommandToModel": {
+        "System.Void Versoes.Core.Domain.AutoMapper.CommandToModel::.ctor()": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\AutoMapper\\ModelToViewModel.cs": {
+      "Versoes.Core.Domain.AutoMapper.ModelToViewModel": {
+        "System.Void Versoes.Core.Domain.AutoMapper.ModelToViewModel::.ctor()": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Projetos\\Versoes.Core\\Versoes.Core.Domain\\AutoMapper\\ViewModelToCommand.cs": {
+      "Versoes.Core.Domain.AutoMapper.ViewModelToCommand": {
+        "System.Void Versoes.Core.Domain.AutoMapper.ViewModelToCommand::.ctor()": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

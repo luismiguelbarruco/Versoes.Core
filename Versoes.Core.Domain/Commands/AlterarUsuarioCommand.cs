@@ -1,6 +1,6 @@
 ﻿using Versoes.Entities;
 
-namespace Versoes.Core.Domain.Commands.Validations
+namespace Versoes.Core.Domain.Commands
 {
     public class AlterarUsuarioCommand : UsuarioCommand
     {

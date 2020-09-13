@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using System.Threading.Tasks;
 using Versoes.Core.Domain.Commands;
-using Versoes.Core.Domain.Commands.Validations;
 using Versoes.Core.Domain.Repositories;
 using Versoes.Core.Domain.ResultComunication;
 using Versoes.Core.Domain.Services;

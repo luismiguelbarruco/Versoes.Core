@@ -5,6 +5,7 @@
         public AlterarUsuarioValidation(UsuarioForUpdateViewModel viewModel) 
             : base(viewModel)
         {
+            ValidateId();
             ValidateNome();
             ValidateSigla();
             ValidateSetor();
