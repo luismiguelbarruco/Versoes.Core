@@ -20,7 +20,8 @@ namespace Versoes.Core.Domain.ViewModels.Validations
         {
             AddNotifications(new Contract()
                 .IsNotNullOrEmpty(_setorViewModel.Nome, nameof(_setorViewModel.Nome), "Nome é obrigatório")
-                .HasMaxLen(_setorViewModel.Nome, 100, nameof(_setorViewModel.Nome), "Nome não pode ser maior que 100 caracteres.")
+                .HasMinLengthIfNotNullOrEmpty(_setorViewModel.Nome, 3, nameof(_setorViewModel.Nome), "Nome deve ter no mínimo 3 caracteres.")
+                .HasMaxLengthIfNotNullOrEmpty(_setorViewModel.Nome, 30, nameof(_setorViewModel.Nome), "Nome não pode ser maior que 30 caracteres.")
             );
         }
     }

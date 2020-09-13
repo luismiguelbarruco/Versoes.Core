@@ -20,7 +20,8 @@ namespace Versoes.Core.Domain.Commands
         {
             AddNotifications(new Contract()
                 .IsNotNullOrEmpty(Nome, nameof(Nome), "Nome é obrigatório")
-                .HasMaxLen(Nome, 100, nameof(Nome), "Nome não pode ser maior que 100 caracteres.")
+                .HasMinLengthIfNotNullOrEmpty(Nome, 3, nameof(Nome), "Nome deve ter no mínimo 3 caracteres.")
+                .HasMaxLengthIfNotNullOrEmpty(Nome, 30, nameof(Nome), "Nome não pode ser maior que 30 caracteres.")
             );
         }
     }

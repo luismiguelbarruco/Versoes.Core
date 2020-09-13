@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Versoes.Core.Domain.Commands;
-using Versoes.Core.Domain.Commands.Validations;
 using Versoes.Core.Domain.ViewModels;
 
 namespace Versoes.Core.Domain.AutoMapper

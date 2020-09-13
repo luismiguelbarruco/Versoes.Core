@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Versoes.Core.Domain.Commands;
-using Versoes.Core.Domain.Commands.Validations;
 using Versoes.Entities.Models;
 
 namespace Versoes.Core.Domain.AutoMapper

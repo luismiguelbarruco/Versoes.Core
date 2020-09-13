@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Versoes.Core.Domain.Commands;
-using Versoes.Core.Domain.Commands.Validations;
 using Versoes.Core.Domain.Handlers;
 using Versoes.Core.Domain.Repositories;
 using Versoes.Core.Domain.ResultComunication;
