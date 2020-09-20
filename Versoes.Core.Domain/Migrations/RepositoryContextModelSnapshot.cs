@@ -28,8 +28,8 @@ namespace Versoes.Core.Domain.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("character varying(100)")
-                        .HasMaxLength(100);
+                        .HasColumnType("character varying(60)")
+                        .HasMaxLength(60);
 
                     b.Property<byte>("Status")
                         .HasColumnType("smallint");
@@ -39,7 +39,7 @@ namespace Versoes.Core.Domain.Migrations
                     b.HasIndex("Nome")
                         .IsUnique();
 
-                    b.ToTable("Projeto");
+                    b.ToTable("Projetos");
                 });
 
             modelBuilder.Entity("Versoes.Entities.Models.Setor", b =>
@@ -51,8 +51,8 @@ namespace Versoes.Core.Domain.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("character varying(100)")
-                        .HasMaxLength(100);
+                        .HasColumnType("character varying(30)")
+                        .HasMaxLength(30);
 
                     b.Property<byte>("Status")
                         .HasColumnType("smallint");
@@ -62,7 +62,7 @@ namespace Versoes.Core.Domain.Migrations
                     b.HasIndex("Nome")
                         .IsUnique();
 
-                    b.ToTable("Setor");
+                    b.ToTable("Setores");
 
                     b.HasData(
                         new
@@ -111,21 +111,21 @@ namespace Versoes.Core.Domain.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("character varying(100)")
-                        .HasMaxLength(100);
+                        .HasColumnType("character varying(60)")
+                        .HasMaxLength(60);
 
                     b.Property<string>("Senha")
                         .IsRequired()
-                        .HasColumnType("character varying(20)")
-                        .HasMaxLength(20);
+                        .HasColumnType("character varying(40)")
+                        .HasMaxLength(40);
 
                     b.Property<int>("SetorId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Sigla")
                         .IsRequired()
-                        .HasColumnType("character varying(20)")
-                        .HasMaxLength(20);
+                        .HasColumnType("character varying(5)")
+                        .HasMaxLength(5);
 
                     b.Property<byte>("Status")
                         .HasColumnType("smallint");
@@ -143,7 +143,7 @@ namespace Versoes.Core.Domain.Migrations
 
                     b.HasIndex("SetorId");
 
-                    b.ToTable("Usuario");
+                    b.ToTable("Usuarios");
 
                     b.HasData(
                         new
@@ -151,7 +151,7 @@ namespace Versoes.Core.Domain.Migrations
                             Id = 1,
                             Login = "admin",
                             Nome = "Administrador",
-                            Senha = "admin123",
+                            Senha = "jL0Xh/2fRnMB/2lfILO9MQ==",
                             SetorId = 5,
                             Sigla = "ADM",
                             Status = (byte)0

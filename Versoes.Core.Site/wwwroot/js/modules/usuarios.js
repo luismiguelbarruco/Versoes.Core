@@ -27,7 +27,7 @@ export default function initUsuarios() {
             const Sigla = this.querySelector('#sigla').value;
             const Login = this.querySelector('#login').value;
             const Senha = this.querySelector('#senha').value;
-            console.log(Id, Nome, Sigla, Login, Senha, Status, Setor);
+            // console.log(Id, Nome, Sigla, Login, Senha, Status, Setor);
 
             // console.log(JSON.stringify({ Id, Nome, Status }));
             if (Id) {
@@ -156,7 +156,7 @@ export default function initUsuarios() {
     async function handleGetAllUsuarios() {
 
         const linha = document.createElement('tr');
-        linha.innerHTML = ('<td colspan="5" class="text-center text-mcm">Carregando usuarios...</td>');
+        linha.innerHTML = ('<td colspan="5" class="text-center text-mcm">Carregando usuários...</td>');
         tbodyUsuario.insertBefore(linha, null);
 
         try {
@@ -238,7 +238,14 @@ export default function initUsuarios() {
     $('#modal-usuario').on('show.bs.modal', function(event) {
         handleModalStyleByOperation(event.relatedTarget, this, 'usuário');
         const id = +event.relatedTarget.dataset.id;
-        console.log(id);
+
+        if (id) {
+            this.querySelector('#senha').required = false;
+        } else {
+            this.querySelector('#senha').required = true;
+        }
+        console.log(this.querySelector('#senha'));
+
         handleGetUsuario(id);
 
     });
