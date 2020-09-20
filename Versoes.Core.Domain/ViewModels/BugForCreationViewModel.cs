@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using Versoes.Entities.Models;
+using System.Diagnostics.CodeAnalysis;
+using Versoes.Core.Domain.ValueObjects;
 
 namespace Versoes.Core.Domain.ViewModels
 {
+    [ExcludeFromCodeCoverage]
     public class BugForCreationViewModel
     {
         [Required(ErrorMessage = "Descrição é obrigatória.")]

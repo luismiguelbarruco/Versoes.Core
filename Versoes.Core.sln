@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Versoes.Core.Domain", "Vers
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Versoes.Core.Site", "Versoes.Core.Site\Versoes.Core.Site.csproj", "{B6BE6D04-F89A-45DF-9D66-4AF07313DFA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versoes.Core.Test", "Versoes.Core.Test\Versoes.Core.Test.csproj", "{28732655-433D-4597-80FB-A06ED2DDE8C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Versoes.Core.Test", "Versoes.Core.Test\Versoes.Core.Test.csproj", "{28732655-433D-4597-80FB-A06ED2DDE8C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

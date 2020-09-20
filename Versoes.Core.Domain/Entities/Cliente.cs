@@ -1,5 +1,8 @@
-﻿namespace Versoes.Entities.Models
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Versoes.Entities.Models
 {
+    [ExcludeFromCodeCoverage]
     public class Cliente
     {
         public long Id { get; set; }

@@ -1,8 +1,10 @@
 ﻿using Flunt.Notifications;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Versoes.Core.Domain.ResultComunication
 {
+    [ExcludeFromCodeCoverage]
     public abstract class ResultBase : IResult
     {
         public bool Success { get; set; }

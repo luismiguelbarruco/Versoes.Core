@@ -1,5 +1,9 @@
-﻿namespace Versoes.Entities.Models
+﻿using System.Diagnostics.CodeAnalysis;
+using Versoes.Core.Domain.ValueObjects;
+
+namespace Versoes.Entities.Models
 {
+    [ExcludeFromCodeCoverage]
     public class Usuario
     {
         public int Id { get; set; }

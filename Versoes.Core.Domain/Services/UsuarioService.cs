@@ -78,7 +78,7 @@ namespace Versoes.Core.Domain.Services
         {
             var cadastrarUsuarioCommand = _mapper.Map<CadastrarUsuarioCommand>(usuarioForCreationViewModel);
 
-            var usuarioHandle = new UsuarioHandle(_mapper, _repository, _cryptographyService);
+            var usuarioHandle = new UsuarioHandler(_mapper, _repository, _cryptographyService);
 
             var result = await usuarioHandle.Handler(cadastrarUsuarioCommand);
 
@@ -89,7 +89,7 @@ namespace Versoes.Core.Domain.Services
         {
             var alterarUsuarioCommand = _mapper.Map<AlterarUsuarioCommand>(usuarioForUpdateVireModel);
 
-            var usuarioHandle = new UsuarioHandle(_mapper, _repository, _cryptographyService);
+            var usuarioHandle = new UsuarioHandler(_mapper, _repository, _cryptographyService);
 
             var result = await usuarioHandle.Handler(alterarUsuarioCommand);
 

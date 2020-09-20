@@ -13,7 +13,7 @@ namespace Versoes.Core.Domain.Repositories
         Task<Usuario> GetUsuarioByLoginAsync(string login);
         Task<Usuario> GetSetorByLoginAndDiferentIdAsync(long id, string login);
         Task<Usuario> GetUsuarioBySiglaAsync(string sigla);
-        Task<Usuario> GetSetorBySiglaAndDiferentIdAsync(long id, string sigla);
+        Task<Usuario> GetUsuarioBySiglaAndDiferentIdAsync(long id, string sigla);
         Task<Usuario> GetUsuarioAsync(string login, string password);
     }
 }

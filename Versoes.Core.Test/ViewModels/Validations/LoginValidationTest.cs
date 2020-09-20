@@ -4,6 +4,7 @@ using Versoes.Core.Domain.ViewModels;
 
 namespace Versoes.Core.Test.ViewModels.Validations
 {
+    [TestFixture(TestName = "LoginValidation")]
     public class LoginValidationTest
     {
         private LoginViewModel _loginViewModel;

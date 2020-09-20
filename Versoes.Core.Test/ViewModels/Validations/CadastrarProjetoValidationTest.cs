@@ -4,6 +4,7 @@ using Versoes.Core.Domain.ViewModels;
 
 namespace Versoes.Core.Test.ValidationsTest
 {
+    [TestFixture(TestName = "CadastrarProjetoValidation")]
     public class CadastrarProjetoValidationTest
     {
         private ProjetoForCreationViewModel _projetoForCreationViewModel;

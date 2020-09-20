@@ -1,8 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks;
 using Versoes.Entities;
 
 namespace Versoes.Core.Domain.Repositories
 {
+    [ExcludeFromCodeCoverage]
     public class RepositoryWrapper : IRepositoryWrapper
     {
         private readonly RepositoryContext repositoryContext;

@@ -1,4 +1,4 @@
-using Versoes.Entities;
+using Versoes.Core.Domain.ValueObjects;
 
 namespace Versoes.Core.Domain.Commands
 {
@@ -18,7 +18,7 @@ namespace Versoes.Core.Domain.Commands
 
             if (Invalid)
             {
-                ValidationResult = new CommandResult(false, "Não foi possivel alterar os dados do setor", Notifications);
+                ValidationResult = new CommandResult(false, "Nï¿½o foi possivel alterar os dados do setor", Notifications);
                 return false;
             }
 

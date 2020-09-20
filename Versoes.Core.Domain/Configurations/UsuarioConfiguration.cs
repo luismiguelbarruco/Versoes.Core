@@ -1,9 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Diagnostics.CodeAnalysis;
 using Versoes.Entities.Models;
+using Versoes.Core.Domain.ValueObjects;
 
 namespace Versoes.Entities.Configurations
 {
+    [ExcludeFromCodeCoverage]
     public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)
@@ -21,6 +24,17 @@ namespace Versoes.Entities.Configurations
             builder.Property(usuario => usuario.Status).IsRequired();
 
             builder.HasOne(usuario => usuario.Setor);
+
+            builder.HasData(new Usuario
+            {
+                Id = 1,
+                Login = "admin",
+                Senha = "jL0Xh/2fRnMB/2lfILO9MQ==", //admin123
+                Nome = "Administrador",
+                Sigla = "ADM",
+                SetorId = 5,
+                Status = StatusDeCadastro.Normal
+            });
         }
     }
 }

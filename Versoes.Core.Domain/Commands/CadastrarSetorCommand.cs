@@ -1,4 +1,4 @@
-using Versoes.Entities;
+using Versoes.Core.Domain.ValueObjects;
 
 namespace Versoes.Core.Domain.Commands
 {
@@ -16,7 +16,7 @@ namespace Versoes.Core.Domain.Commands
 
             if (Invalid)
             {
-                ValidationResult = new CommandResult(false, "Não foi possivel cadastrar setor", Notifications);
+                ValidationResult = new CommandResult(false, "Nï¿½o foi possivel cadastrar setor", Notifications);
                 return false;
             }
 

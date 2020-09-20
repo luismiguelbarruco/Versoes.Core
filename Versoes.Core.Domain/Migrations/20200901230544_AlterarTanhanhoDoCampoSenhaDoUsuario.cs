@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Versoes.Core.Domain.Migrations
 {
+    [ExcludeFromCodeCoverage]
     public partial class AlterarTanhanhoDoCampoSenhaDoUsuario : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using Versoes.Core.Domain.ValueObjects;
 using Versoes.Entities.Models;
 
 namespace Versoes.Core.Domain.Entities
 {
+    [ExcludeFromCodeCoverage]
     public class Anotacao
     {
         public long Id { get; set; }

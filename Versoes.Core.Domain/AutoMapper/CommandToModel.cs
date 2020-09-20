@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
+using System.Diagnostics.CodeAnalysis;
 using Versoes.Core.Domain.Commands;
 using Versoes.Entities.Models;
 
 namespace Versoes.Core.Domain.AutoMapper
 {
+    [ExcludeFromCodeCoverage]
     public class CommandToModel : Profile
     {
         public CommandToModel()
