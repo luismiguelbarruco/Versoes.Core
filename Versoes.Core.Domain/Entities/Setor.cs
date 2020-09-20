@@ -1,6 +1,9 @@
-﻿
+﻿using System.Diagnostics.CodeAnalysis;
+using Versoes.Core.Domain.ValueObjects;
+
 namespace Versoes.Entities.Models
 {
+    [ExcludeFromCodeCoverage]
     public class Setor
     {
         public int Id { get; set; }

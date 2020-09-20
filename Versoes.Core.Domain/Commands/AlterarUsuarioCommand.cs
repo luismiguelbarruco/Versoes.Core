@@ -1,4 +1,4 @@
-﻿using Versoes.Entities;
+﻿using Versoes.Core.Domain.ValueObjects;
 
 namespace Versoes.Core.Domain.Commands
 {

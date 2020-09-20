@@ -1,7 +1,9 @@
-﻿using Versoes.Core.Domain.Entities;
+﻿using System.Diagnostics.CodeAnalysis;
+using Versoes.Core.Domain.ValueObjects;
 
 namespace Versoes.Entities.Models
 {
+    [ExcludeFromCodeCoverage]
     public class Projeto
     {
         public long Id { get; set; }

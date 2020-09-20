@@ -1,9 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Diagnostics.CodeAnalysis;
 using Versoes.Entities.Models;
 
 namespace Versoes.Entities.Configurations
 {
+    [ExcludeFromCodeCoverage]
     public class ProjetoConfiguration : IEntityTypeConfiguration<Projeto>
     {
         public void Configure(EntityTypeBuilder<Projeto> builder)

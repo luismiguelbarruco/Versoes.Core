@@ -50,7 +50,7 @@ namespace Versoes.Core.Domain.Repositories
             await FindByCondition(u => u.Id != id && u.Login.Equals(login))
                 .FirstOrDefaultAsync();
 
-        public async Task<Usuario> GetSetorBySiglaAndDiferentIdAsync(long id, string sigla) =>
+        public async Task<Usuario> GetUsuarioBySiglaAndDiferentIdAsync(long id, string sigla) =>
             await FindByCondition(u => u.Id != id && u.Login.Equals(sigla))
                 .FirstOrDefaultAsync();
 

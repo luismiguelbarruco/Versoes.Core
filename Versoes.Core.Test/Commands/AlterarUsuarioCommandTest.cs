@@ -1,10 +1,11 @@
 ﻿using NUnit.Framework;
 using System.Linq;
 using Versoes.Core.Domain.Commands;
-using Versoes.Entities;
+using Versoes.Core.Domain.ValueObjects;
 
 namespace Versoes.Core.Test.Commands
 {
+    [TestFixture(TestName = "AlterarUsuarioCommand")]
     public class AlterarUsuarioCommandTest
     {
         [Test]

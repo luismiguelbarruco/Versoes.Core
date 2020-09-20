@@ -5,6 +5,7 @@ using Versoes.Core.Domain.ViewModels;
 
 namespace Versoes.Core.Test.ValidationsTest
 {
+    [TestFixture(TestName = "AlterarSetorValidation")]
     public class AlterarSetorValidationTest
     {
         private SetorForUpdateViewModel _setorForUpdateViewModel;

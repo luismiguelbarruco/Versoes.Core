@@ -5,6 +5,7 @@ using Versoes.Entities.Models;
 
 namespace Versoes.Core.Test.ValidationsTest
 {
+    [TestFixture(TestName = "AlterarUsuarioValidation")]
     public class AlterarUsuarioValidationTest
     {
         private UsuarioForUpdateViewModel _usuarioForUpdateViewModel;

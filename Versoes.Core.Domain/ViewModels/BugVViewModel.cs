@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Versoes.Entities.Models;
+using Versoes.Core.Domain.ValueObjects;
+
+using System.Diagnostics.CodeAnalysis;
 
 namespace Versoes.Core.Domain.ViewModels
 {
+    [ExcludeFromCodeCoverage]
     public class BugVireModel
     {
         public long Id { get; set; }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using Versoes.Entities;
@@ -7,6 +8,7 @@ using Versoes.Entities.Models;
 
 namespace Versoes.Core.Domain.Repositories
 {
+    [ExcludeFromCodeCoverage]
     public class RequisitoRepository : RepositoryBase<Requisito>, IRequisitoRepository
     {
         public RequisitoRepository(RepositoryContext repositoryContext)

@@ -1,11 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Linq.Expressions;
 using Versoes.Entities;
 
 namespace Versoes.Core.Domain.Repositories
 {
+    [ExcludeFromCodeCoverage]
     public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
         protected RepositoryContext RepositoryContext { get; set; }
