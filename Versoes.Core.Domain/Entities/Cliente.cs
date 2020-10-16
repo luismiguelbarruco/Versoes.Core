@@ -7,6 +7,6 @@ namespace Versoes.Entities.Models
     {
         public long Id { get; set; }
         public string NomeFantasia { get; set; }
-        public string RazaoSocial { get; set; }
+        public bool Cancelado { get; set; }
     }
 }
